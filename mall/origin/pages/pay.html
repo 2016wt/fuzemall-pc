@@ -1,0 +1,146 @@
+<div class="progress_top">
+	<!--<span>确认订单</span>
+	<label><img src="img/step3.png"></label>-->
+	<img src="img/cart-step3.png" alt="">
+</div>
+<div class="centered" id="order_pay">
+	<!-- 订单详情 -->
+</div>
+
+<div class="zhifu">
+	<div class="bg_c_w centered">
+		<div class="order_message">	
+			<div class="order_zhifu">
+				<div class="order_msgtit">选择支付方式</div>
+				<div class="order_payment clearfix">
+					<p class="order_title ">支付平台</p>
+					<div data-type=1 class="payment_list active">
+						<span class="select_span"></span>
+						<label><img src="img/zhifubao.png"/></label>
+					</div>
+					<div data-type=3 class="payment_list">
+						<span class="select_span"></span>
+						<label><img src="img/weixin_icon.png"/></label>
+					</div>
+					<div data-type=5 class="payment_list">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/online_pay.png"/></label>
+					</div>
+					<div data-type=2 class="payment_list pingtaibi">
+						<span class="select_span"></span>
+						<label><img src="img/pingtai_icon.png"/></label>
+					</div>
+				</div>
+
+				<div class="order_bank clearfix">
+					<p class="order_title">银行贷记卡与信用卡支付</p>
+					<div class="bank_list" data-type="ICBC">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/icbc.png"/></label>
+					</div>
+					<div class="bank_list" data-type="CMB">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/cmb.png"/></label>
+					</div>
+					<div class="bank_list" data-type="BOC">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/boc.png"/></label>
+					</div>
+					<div class="bank_list" data-type="ABC">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/abc.png"/></label>
+					</div>
+					<div class="bank_list" data-type="CCB">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/ccb.png"/></label>
+					</div>
+					<div class="bank_list" data-type="CMBC">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/cmbc.png"/></label>
+					</div>
+					<div class="bank_list" data-type="CEB">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/ceb.png"/></label>
+					</div>
+					<div class="bank_list" data-type="CNCB">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/cncb.png"/></label>
+					</div>
+					<div class="bank_list" data-type="SPDB">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/spdb.png"/></label>
+					</div>
+					<div class="bank_list" data-type="HXB">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/hxb.png"/></label>
+					</div>
+					<div class="bank_list" data-type="SDB">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/sdb.png"/></label>
+					</div>
+					<div class="bank_list" data-type="GDB">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/gdb.png"/></label>
+					</div>
+					<div class="bank_list" data-type="BCCB">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/bccb.png"/></label>
+					</div>
+					<div class="bank_list" data-type="PSBC">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/psbc.png"/></label>
+					</div>
+					<div class="bank_list" data-type="BOS">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/bos.png"/></label>
+					</div>
+					<div class="bank_list" data-type="NJCB">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/njcb.png"/></label>
+					</div>
+					<div class="bank_list" data-type="NBCB">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/nbcb.png"/></label>
+					</div>
+					<div class="bank_list" data-type="PAB">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/pab.png"/></label>
+					</div>
+					<div class="bank_list" data-type="BOCOM">
+						<span class="select_span"></span>
+						<label><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/bocom.png"/></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="order_okbtn">
+		<a href="javascript:;" class="btn green btn_180x50" onclick="paynow()">立即支付</a>
+	</div>
+	</div>
+</div>
+<script id="payDetailTemplate" type="text/x-jquery-tmpl">
+	<div class="order_success_ok">
+		<!--<span class="success_okicon"></span>-->
+		<p class="order_succ_p"><span>订单提交成功</span><label>应付金额<font>￥${total_price}</font>元</label></p>
+		<p class="order_succ_bh">
+			{{if intval>1}}
+				订单编号：${order_no} 您的付款时间还有<span>{{html $.timeFormat(intval)}}</span>，超时后订单会自动取消
+			{{else}}
+				<span style="color:#fd4a4a;">订单已超时取消</span>
+			{{/if}}
+		</p>
+		<p class="order_commodity">商品：${title}</p>
+		{{if address_detail}}<p class="order_getsaddrs">收货地址：${address_detail}</p>{{/if}}
+	</div>
+</script>
+<script id="ptbczPop" type="text/x-jquery-tmpl">
+	<div class="popmsg">平台币不足，请充值。</div>
+	<div class="pop_btn">
+		<div class="btn btn_140x40 yellow pop_cancel" style="margin-right:10px;">
+			更改支付方式
+		</div>
+		<div class="btn btn_140x40 yellow pop_ok">
+			去充值
+		</div>
+	</div>
+</script>

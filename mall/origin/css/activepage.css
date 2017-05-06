@@ -1,0 +1,294 @@
+@font-face {
+  font-family: 'lantinghei';
+  src: url(font_face/newfont.TTF);
+  src: url(font_face/newfont.TTF) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+	background: #f5f5f5;
+	font-family: '微软雅黑';
+}
+.game-banner{
+	min-width: 1230px;
+	width:100%;
+	height:740px;
+	
+}
+.game-banner ul{
+	height: 750px;
+}
+.game-banner li{
+	min-width: 1230px;
+	width:100%;
+	display: list-item;
+	height: 740px;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	
+}
+.game-banner img{
+	text-align: center;
+	width:100%;
+	height:auto;
+	display: block;
+}
+.game-txt{
+	font-size: 16px;
+    font-weight: 100;
+    line-height: 26px;
+    text-align: center;
+    color: #333;
+    background:#fff;
+    padding: 22px 0 28px 0; 
+}
+.game-txt span{
+	color:#e65c54;
+}
+.gameintro-txt{
+	width:1225px;
+	margin:0 auto;
+}
+.activeintro{
+	float:left;
+	font-size:23px;
+	color:#5e5e5e;
+	padding-right:27px;
+	font-family: '微软雅黑';
+}
+.txtcontent{
+	font-size:15px;
+	color:#5e5e5e;
+	line-height: 28px;
+
+}
+
+.buyfuzebtn{
+	width:300px;
+	height:48px;
+	display: block;
+	background: #e65c54;
+	color:#fff;
+	text-align: center;
+	line-height: 48px;
+	border-radius: 3px;
+	font-size:17px;
+	margin:18px auto 0 auto;
+	font-family: '微软雅黑';
+}
+.activepage-content{
+	width:1225px;
+	margin:0 auto;
+}
+.content:nth-of-type(1){
+	height:720px;
+}
+.content:nth-of-type(2){
+	
+	
+}
+.content:nth-of-type(3){
+	
+	/*margin-bottom:29px;*/
+	
+}
+.content:nth-of-type(2) .awardlist{
+	padding:20px 0 28px 46px;
+	box-sizing:border-box;
+	line-height: 25px;
+	font-size:14px;
+	background: #fff;
+	
+}
+.content:nth-of-type(3) .awardlist{
+	/*padding:16px 44px 40px 44px;
+	background: #fff;*/
+	/*height:230px;*/
+	box-sizing:border-box;
+}
+.content:nth-of-type(2) .awardlist span{
+	font-weight:600;
+}
+.awardset{
+	width:100%;
+	height:70px;
+	color:#414040;
+	padding-top:16px;
+	line-height: 54px;
+	font-size:23px;
+	box-sizing:border-box;
+}
+.activeRules,.winnerList{
+	width:100%;
+	height:70px;
+	color:#414040;
+	padding-top:20px;
+	line-height: 46px;
+	font-size:23px;
+	box-sizing:border-box;
+}
+.first-item,.second-item{
+	margin-bottom:23px;
+}
+.awardlist{
+	color:#5e5e5e;
+}
+.awardlist dl{
+	width:288px;
+	height:314px;
+	background: #fff;
+	margin-right:18px;
+	margin-bottom:19px;
+	float: left;
+	box-sizing:border-box;
+	position: relative;
+
+}
+.awardlist dl img{
+	width:100%;
+	height:auto;
+	display: block;
+}
+
+.awardlist dl:nth-of-type(7){
+	width:600px;
+	margin:0;
+	
+}
+.awardlist dl:nth-of-type(7) dt{
+	width:100%;
+	
+	
+}
+.awardlist dl:nth-of-type(7) dd p{
+	
+}
+.awardlist dl dt{
+	width:100%;
+	margin:0 auto;
+}
+.awardlist dl dt img{
+	width:100%;
+	height: auto;
+	display: block;
+}
+.awardlist dl dd p{
+	color:#282828;
+	font-size:17px;
+	text-align: center;
+	line-height: 31px;
+	
+}
+.awardlist dl dd span{
+	color:#e65c54;
+	font-size:16px;
+	text-align: center;
+	display: block;
+}
+.sj{
+	position: absolute;
+	left:0;top:0;
+	width: 0;
+    height: 0;
+    font-size:24px;
+    border-top: 64px solid #e65c54;
+    border-right: 84px solid transparent;
+    color:#fefefe;
+}
+.sj i{
+	position: absolute;
+	left:50%;top:50%;
+	margin-left: 19px;
+    margin-top: -61px;
+    font-weight: bold;
+	font-style:normal;
+}
+.second-item ul{
+	padding-left:12px;
+}
+.end{}
+.currentPeriod{
+	margin-bottom:36px;
+	background: red;
+}
+.currentPeriod ol,.firstphase ol{
+	width:100%;
+	height: 37px;
+	border-bottom:1px solid #e5e5e5;
+	margin:0;padding:0;
+
+}
+.currentPeriod ol li,.firstphase ol li{
+	float:left;
+	line-height: 36px;
+	font-size:18px;
+	list-style: none;
+	margin-right:30px;
+	
+	
+}
+.currentPeriod ol li span,.firstphase ol li span{
+	color:#e65c54;
+}
+.goago{
+	float:right;
+	width:134px;
+	height:28px;
+	font-size:14px;
+	text-align: center;
+	line-height: 28px;
+	background: #e65c54;
+	color:#fdf5f5;
+	border-radius: 14px;
+}
+.currentPeriod ul,.firstphase ul{
+	padding-top:9px;
+	width:100%;
+	margin:0;
+}
+.currentPeriod ul li,.firstphase ul li{
+	line-height: 26px;
+	font-size:14px;
+	color:#858484;
+	float:left;
+	margin-right:28px;
+}
+i{font-style: normal;}
+.winner{
+	height:98px;
+	padding: 20px 44px 32px 44px;
+    background: #fff;
+	margin-bottom:10px;
+}
+.checkago{
+	width:300px;
+	height:46px;
+	border:1px solid #c8c8c8;
+	color:#484747;
+	font-size:18px;
+	text-align: center;
+	line-height: 46px;
+	border-radius:3px;
+	margin:32px auto 32px auto;
+	cursor: pointer;
+	display:block;
+
+}
+.jingqing{
+	padding:40px 0 40px 0!important;
+	color:#b5b5b5;
+	box-sizing:border-box;
+}
+.wait{
+	height:150px;
+	color:#b5b5b5;
+	box-sizing:border-box;
+	font-size:18px;
+	line-height: 150px;
+	text-align: center;
+	height:auto!important;
+	background: #fff;
+	margin-bottom:10px;
+	
+}

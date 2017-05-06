@@ -1,0 +1,33 @@
+<div class="express_wrap" id="express">
+	<!-- 物流信息 -->
+</div>
+<script id="expressTemplate" type="text/x-jquery-tmpl">
+	<dl class="news_contit">
+		<dt>查看物流</dt>
+	</dl>
+	<div class="express_info">
+		<img src="${thumb}">
+		<div class="express_info_detail">
+			<div>物流状态: <span>{{if list.length != 0}}${list[0].status}{{else}}揽货中{{/if}}</span></div>
+			<div>承运公司: <span>${express_name}</span></div>
+			<div>运单编号: <span>${number}</span></div>
+			<div>官方电话: <span>${express_phone}</span></div>
+		</div>
+	</div>
+	<dl class="news_contit">
+		<dt>物流跟踪</dt>
+	</dl>
+	<ul id="express_flow">
+		{{if list.length!=0}}
+			{{each list}}
+				<li class="{{if $index==0}}active{{/if}} {{if list.length==$index+1}}last_express{{/if}}">
+					<div class="express_dot"></div>
+					<div class="express_location">${context}</div>
+					<div class="express_time">${time}</div>
+				</li>
+			{{/each}}
+		{{else}}
+			<div>暂未查到物流详情，请稍后再试...</div>
+		{{/if}}
+	</ul>
+</script>

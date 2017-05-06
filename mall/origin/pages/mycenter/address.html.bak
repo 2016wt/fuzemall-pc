@@ -1,0 +1,40 @@
+<style>
+	.r_loading {
+	    background-image: url('/mall/img/loading.gif');
+	    background-repeat: no-repeat;
+	    background-position: center 250px;
+	}
+</style>
+<div class="center_wrap address_manag">
+	<dl class="news_contit">
+		<dt>收货地址</dt>
+	</dl>
+	<div class="c_addr_btn">
+		<div class="btn btn_140x40 f_s14">添加新地址</div>
+		<div class="address_info">您已创建<span class="curr_count">0</span>个收货地址，最多可创建<span class="total_count">8</span>个</div>
+	</div>
+	<div class="c_addr_head">
+		<div class="c_addr_hone">姓名</div>
+		<div class="c_addr_htwo">联系电话</div>
+		<div class="c_addr_hthr">详细地址</div>
+		<div class="c_addr_hfou"></div>
+		<div class="c_addr_hsix">操作</div>
+	</div>
+	<div class="c_addr_detail_wrap">
+
+	</div>
+</div>
+<script type="text/x-jquery-tmpl" id="addressListTemplate">
+	{{each list}}
+		<div id="target_addr_${id}" class="c_addr_list  {{if address_default == 1}}active{{/if}}">
+			<p class="c_addr_hone">${address_name}</p>
+			<p class="c_addr_htwo">${address_phone}</p>
+			<p class="c_addr_hthr"><span>${address_province}${address_city}${address_region}${address_detail}</span></p>
+			<p class="c_addr_hfou">默认地址</p>
+			<p class="c_addr_hsix">	
+				<a hre="javascript:;" class="c_addr_del" data-id="${id}">删除</a>
+				<a hre="javascript:;" class="c_addr_set" data-id="${id}">编辑</a>
+			</p>
+		</div>
+	{{/each}}
+</script>

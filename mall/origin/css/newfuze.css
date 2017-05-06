@@ -1,0 +1,271 @@
+#pagebox {
+  transition: all 1000ms cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition: all 1000ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+#pagebox.top {
+  transform: translate3d(0px, 80px, 0px);
+  -webkit-transform: translate3d(0px, 80px, 0px);
+}
+#pagebox.bottom {
+  transform: translate3d(0px, -400px, 0px);
+  -webkit-transform: translate3d(0px, -400px, 0px);
+}
+.fuze_full {
+  vertical-align: top;
+  padding-top: 76px;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.sc0_w {
+  width: 290px;
+  position: absolute;
+  left: 50%;
+  margin-left: -145px;
+  top: 12.894%;
+}
+.section0_tit {
+  /*padding-top: 80px;*/
+}
+.section0_tit,
+.section0_tit2 {
+  display: block;
+  text-align: center;
+  font-size: 0.26rem;
+  color: #333;
+}
+.section0_tit2 {
+  font-size: 0.15rem;
+  padding-top: 15px;
+}
+.secti0_img {
+  height: 91.42%;
+  position: relative;
+  bottom: -40%;
+  right: -5%;
+}
+.section1_top {
+  height: 50%;
+  background: url(../img/fuze/tvback.png) center center no-repeat #0c1117;
+  text-align: center;
+}
+.section1_top img {
+  position: relative;
+  top: 6%;
+  width: 90.20%;
+}
+.section1_bot {
+  display: block;
+  text-align: center;
+}
+.section1_bot img {
+  margin-top: 30px;
+  width: 15.40%;
+}
+.section1_bot .set1_botp {
+  font-size: 0.273rem;
+  color: #333;
+  padding: 2% 0 0 0;
+}
+.section1_bot .se1_font {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  font-size: 0.09375rem;
+  color: #333;
+  line-height: 24px;
+  width: 630px;
+  margin: 0 0 0 -315px;
+}
+.sect2_box {
+  position: absolute;
+  top: 6%;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding-top: 76px;
+}
+#section2 .sect2_tit {
+  font-size: 0.25rem;
+  padding-bottom: 2%;
+}
+.fuze_handles {
+  background: url(http://fuzeweb.w.wcsapi.biz.matocloud.com/fuzemall/goods/mall/zhuozi.png) no-repeat;
+  background-size: 1920px auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.handle_red,
+.handle_gold,
+.handle_gray,
+.handle_white {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  transition: all 1s;
+}
+.handle_red img,
+.handle_gold img,
+.handle_gray img,
+.handle_white img {
+  width: 100%;
+}
+.handle_red {
+  left: 10%;
+  width: 26%;
+  bottom: 16.5%;
+}
+.handle_gold {
+  left: 47%;
+  width: 31.3%;
+  margin-left: -15.6%;
+  bottom: 28%;
+}
+.handle_gray {
+  left: 47%;
+  width: 32.3%;
+  bottom: -1%;
+  margin-left: -16.15%;
+}
+.handle_white {
+  right: 19%;
+  width: 23.7%;
+  bottom: -3%;
+}
+.section p {
+  font-size: 0.09375rem;
+  color: #333;
+  text-align: center;
+  display: block;
+  line-height: 32px;
+  position: relative;
+  z-index: 5;
+}
+.section .seti3_tit {
+  font-size: 0.25rem;
+  padding: 5% 0 2% 0;
+  text-align: center;
+}
+.fuze_fullside {
+  display: block;
+  height: 2.04166667rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.fuze_fullside img {
+  width: 100%;
+  height: 100%;
+}
+.section .seti4_tit {
+  font-size: 48px;
+  padding-bottom: 2%;
+}
+.fuze_handimg {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 45%;
+  display: block;
+  margin-left: -20.25%;
+}
+.fuze_handimg img {
+  width: 100%;
+}
+#section5 .seti3_tit {
+  color: #fff;
+  text-align: center;
+}
+.fuzefull_black {
+  transition: all 6s ease-out;
+  width: 38%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 28%;
+  margin: 0 0 0 -19%;
+  opacity: 0;
+}
+.section.active .fuzefull_black {
+  opacity: 1;
+}
+.fuzefull_black img {
+  width: 100%;
+}
+.sect6_tit {
+  display: block;
+  text-align: center;
+  padding: 0 0 2% 0;
+}
+.full_video {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 48%;
+  margin-left: -26%;
+}
+.full_video #video {
+  width: 100%;
+}
+.sect6_tit {
+  font-size: 48px;
+  color: #333;
+}
+.full_ypic {
+  width: 72.39%;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+  height: 70%;
+}
+.full_ypic img {
+  width: 100%;
+  position: relative;
+  top: -0.46rem;
+}
+.fullpic_bot {
+  text-align: center;
+}
+.sect7_tit {
+  font-size: 0.25rem;
+  color: #333;
+  padding: 1.5% 0 1% 0;
+  text-align: center;
+}
+.full_zhuji {
+  width: 51.8%;
+  margin: 0.41666667rem auto 0 auto;
+  display: block;
+  text-align: center;
+}
+.full_zhuji img {
+  width: 100%;
+}
+.sect8_box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+#section8 .sect8_pic {
+  width: 25%;
+  margin: 0.5% auto;
+}
+#section8 .sect8_pic img {
+  width: 100%;
+}
+.section9 {
+  background: linear-gradient(to bottom, #040404 0%, #1a1a1a 100%);
+  height: 100%;
+}
+.sect9_tit {
+  font-size: 0.25rem;
+  color: #b1b2b2;
+  text-align: center;
+  padding: 5% 0 0 0;
+}

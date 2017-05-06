@@ -1,0 +1,198 @@
+
+<!-- 防止样式覆盖 -->
+<style type="text/css">
+	body{ background-color: #fff; }
+</style>
+
+<!-- 页面内容 -->
+<div class="item_wrapper">
+	<div class="item_tittop">
+		<div  class="auto_width">
+			<span>购买详情</span>
+		</div>
+	</div>
+	<div class="centered ">
+		<div class="item_top">
+			<div class="slider">
+				<div class="large">
+					<ul>
+						<!-- 详情大图 -->
+					</ul>
+				</div>
+				
+				<div class="thumbnail">
+					<ul>
+						<!-- 详情缩略图 -->
+					</ul>
+					<div id="thumbPt"></div>
+				</div>
+			</div>
+			<div class="product-info">
+				<!-- 商品详情信息区域 -->
+			</div>
+		</div>
+	</div>
+	<!-- 商品详情 -->
+	<div class="product-detail">
+		<h2 class="pd-tit">产品详情</h2>
+		<!-- 内容 -->
+		<div class="pd-con" id="pdCon">
+			
+		</div>
+	</div>
+	<!-- 服务模块 -->
+	<div class="product-serve clearfix">
+		<div class="ps-con">
+			<img src="img/serve-1.png">
+			<p class="ps-tit">7天无理由退货</p>
+			<p class="ps-text">自您收到商品7日内可享受无理由退货</p>
+		</div>
+		<div class="ps-con">
+			<img src="img/serve-2.png">
+			<p class="ps-tit">15天免费换货</p>
+			<p class="ps-text">
+				自您收到购买的商品15天内，如遇质量问题，FUZE</br>
+				商城将为您免费换货。来回运费由FUZE商城承担。
+			</p>
+		</div>
+		<div class="ps-con">
+			<img src="img/serve-3.png">
+			
+			<p class="ps-tit">1年质保，免费维修</p>
+			<p class="ps-text">
+				自您收到购买的商品1年内，如遇质量问题，FUZE</br>
+				商城将为您免费维修。来回运费由FUZE商城承担。
+			</p>
+		</div>
+	</div>
+</div>
+<script id="productInfoTemplate" type="text/x-jquery-tmpl">
+    <div class="prd_name">${Goods.title}</div>
+    <div class="prd_font">{{html Goods.detail.info}}</div>
+   
+	<div class="prd_number">
+		<div class="label">数量</div>
+		<div class="counter big value">
+			<div class="subtract">-</div>
+			<div class="count-value">
+				<input type="text" class="count-input" value=1>
+			</div>
+			<div class="plus">+</div>
+		</div>
+	</div>
+	
+	// <div class="operate">
+
+	// 	{{if Goods.button_status == 1}}
+	// 		<div class="buy_btn btn btn_180x40 m_r_10 ljgm">
+	// 			<span>立即购买</span>
+	// 		</div>
+	// 	{{else}}
+	// 		<div class="buy_btn buy_grey btn btn_180x40 m_r_10">
+	// 			<span>立即购买</span>
+	// 		</div>
+	// 	{{/if}}
+		
+	// 	 <div class="prd_price">
+	// 		<div class="label">合计</div>
+	// 		<div class="price value"><font>RMB</font><span></span></div>
+	// 	</div>
+	// 	<!-- <div class="plus1">+1</div> -->
+	// </div>
+	<div class="operate activity">
+		
+		{{if Goods.button_status == 1}}
+			<div class="buy_btn btn btn_180x40 m_r_10 ljgm">
+				<span>立即购买</span>
+			</div>
+		{{else}}
+			<div class="buy_btn buy_grey btn btn_180x40 m_r_10">
+				<span>立即购买</span>
+			</div>
+		{{/if}}
+		
+		 <div class="prd_price">
+			<div class="label">合计</div>
+			<div class="price value"><font>RMB</font><span></span></div>
+		</div>
+		<!-- <div class="plus1">+1</div> -->
+	</div>
+</script>
+<!-- //颜色控件 -->
+<script id="productColorTemplate" type="text/x-jquery-tmpl">
+	<div class="prd_color">
+		<div class="label">可选颜色：</div>
+		<div class="chose-color value">
+			{{each data}}
+				<div class="picker color {{if $index==index}}active{{/if}}" data-type="${type}" data-index="${$index}" style="border: 2px solid ${value};">
+					<span>${label}</span>
+					<div class="color_inner" style="background-color:${value}"></div>
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</script>
+
+<!-- //规格控件 -->
+<script id="productVolumeTemplate" type="text/x-jquery-tmpl">
+	<div class="prd_spec">
+		<div class="label">${name}</div>
+		<div class="chose-color value">
+			{{each data}}
+				<div class="picker option {{if $index==index}}active{{/if}}" data-type="${type}" data-index="${$index}">${label}</div>
+			{{/each}}
+		</div>
+	</div>
+</script>
+
+<!-- //数量控件 -->
+<script id="productHandleTemplate" type="text/x-jquery-tmpl">
+	<div class="prd_gamepad">
+		<div class="label">手柄数量：</div>
+		<div class="chose-color value">
+			{{each data}}
+				<div class="picker   option {{if $index==index}}active{{/if}}  {{if $index%2 !=0}}gripnum {{/if}}" data-type="${type}" data-index="${$index}">${label}</div>
+			{{/each}}
+		</div>
+	</div>
+</script>
+
+
+<!-- //大图模版 -->
+<script id="largeTemplate" type="text/x-jquery-tmpl">
+	{{each images}}
+		<li id="large_${$index}" class="{{if $index==0}}active{{/if}}">
+			<img src="${images[$index]}" data-src="${images[$index]}">
+		</li>
+	{{/each}}
+</script>
+
+<!-- //大图模版 -->
+<script id="largeTemplate123" type="text/x-jquery-tmpl">
+		<li id="${gid}" class="active">
+			<img src="${thumb}" data-src="${thumb}">
+		</li>
+</script>
+
+<!-- //缩略图模版 -->
+<script id="thumbTemplate123" type="text/x-jquery-tmpl">
+	{{each images}}
+		<li data-target="#large_${$index}" class="{{if $index==0}}active{{/if}}" style="{{if $index == 4}}margin-right:0px{{/if}}">
+			<img src="${images[$index]}">
+		</li>
+	{{/each}}
+	
+</script>
+
+<!-- //产品详细介绍，规格参数，常见问题 
+<script id="attrsTemplate" type="text/x-jquery-tmpl">
+	<div id="pro_intro">
+		{{html info}}
+	</div>
+	<div id="pro_speci">
+		{{html attr}}
+	</div>
+	<div id="pro_faq">
+		{{html faq}}
+	</div>
+</script>-->

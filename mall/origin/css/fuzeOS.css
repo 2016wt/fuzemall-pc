@@ -1,0 +1,189 @@
+
+/**
+ *  OS
+ *	simba
+ *	2016.05.09
+ */
+.os-video,
+.os-handle,
+.os-module{
+    font-family: 'lantinghei';
+    min-width: 1230px;
+}
+.os-video{
+    padding-top: 56px;
+    padding-bottom: 258px;
+    font-weight: 100;
+    color: #333;
+    text-align: center;
+    background: url(http://cdn.fuzeuser.com/fuzemall/goods/mall/os-video-bg.png) no-repeat scroll center top;
+    background-size: 100% 100%;
+    color: #fff;
+}
+.os-v-tit,
+.os-v-txt{
+    min-width: 1230px;
+}
+.os-v-tit{
+    margin: 0;
+	font-size: 52px;
+    font-weight: 100;
+}
+.os-v-txt{
+    margin-top: 4px;
+    font-size: 30px;
+}
+@media only screen and (max-width: 1680px){
+    .os-video{
+        padding-top: 40px;
+    }
+    .os-v-tit{
+        font-size: 36px;
+    }
+    .os-v-txt{
+        font-size: 24px;
+    }
+}
+.os-v-video{
+    position: relative;
+    margin: 35px auto 0 auto;
+    width: 1210px;
+    height:680px;
+    background-color: #180905;
+}
+.os-v-video:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -53px;
+    width:100%;
+    height:70px;
+    background: url("../img/fuze/os-bg.png") no-repeat scroll center center;
+    background-size: 100%;
+}
+
+/*手柄介绍*/
+.os-handle{
+    margin-bottom: 80px;
+    width:100%;
+    min-width: 1230px;
+    height:705px;
+    background-color: #ebf0f0;
+}
+.os-h-con{
+    position: relative;
+    margin: 0 auto;
+    width:1230px;
+    height:100%;
+}
+.os-h-img{
+    position: relative;
+    left:-30px;
+    margin-top: 200px;
+}
+.os-h-section{
+    position: absolute;
+    top:30px;
+    right: 120px;
+    padding: 0 40px;
+    width:440px;
+    height:700px;
+    background-color: #fff;
+    box-shadow: 0 0 20px #e0e5e5;
+}
+.os-h-section .os-h-h2{
+    margin-top: 66px;
+    font-size:20px;
+    font-weight: 100;
+    color: #9d9d9d;
+}
+.os-h-section .os-h-h1{
+    margin-top: 12px;
+    font-size: 45px;
+    font-weight: 100;
+    color: #333;
+}
+.os-h-section .os-h-txt{
+    margin-top: 40px;
+    line-height: 34px;
+    font-size: 18px;
+    font-weight: 100;
+    color: #333;
+}
+
+/*模块介绍*/
+.os-module{
+    margin-bottom: 30px;
+    min-width: 1230px;
+    overflow: hidden;
+}
+/*.os-m-list li{
+    height:530px;
+}*/
+.os-m-list li > div{
+    width: 50%;
+    height:100%;
+    box-sizing: border-box;
+}
+.os-m-list li .os-m-imgBox{
+    overflow: hidden;
+}
+.os-m-list li .os-m-txtBox{
+    background-color: #fafafa;
+}
+.os-m-list li.os-m-imgLeft .os-m-imgBox,
+.os-m-list li.os-m-imgRight .os-m-txtBox{
+    float: left;
+}
+.os-m-list li.os-m-imgLeft .os-m-txtBox,
+.os-m-list li.os-m-imgRight .os-m-imgBox{
+    float: right;
+}
+.os-m-txtCon{
+    width:485px;
+}
+.os-m-list li.os-m-imgLeft .os-m-txtCon{
+    float: left;
+    padding-left: 100px;
+    padding-right: 65px;
+}
+.os-m-list li.os-m-imgRight .os-m-txtCon{
+    float: right;
+    padding-left: 65px;
+    padding-right: 100px;
+}
+.os-m-list li.os-m-imgLeft .os-m-imgBox{
+    padding-right: 5px;
+}
+.os-m-list li.os-m-imgRight .os-m-imgBox{
+    padding-left: 5px;
+}
+
+.os-m-icon{
+    position: relative;
+    width:70px;
+    height:70px;
+}
+.os-m-icon:before{
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left:0;
+    width:100%;
+    height:1px;
+    background: #1ab8be;
+}
+.os-m-tit,
+.os-m-txt{
+    color: #333;
+    font-weight: 100;
+}
+.os-m-tit{
+    margin-top: 60px;
+    font-size: 30px;
+}
+.os-m-txt{
+    margin-top: 17px;
+    font-size: 16px;
+    line-height:24px;
+}

@@ -1,0 +1,66 @@
+<div class="orderDetail" id="orderDetail">
+	<!-- 订单详情 -->
+</div>
+
+<script id="orderDetailTemplate" type="text/x-jquery-tmpl">
+	<dl class="news_contit">
+		<dt>订单详情</dt>
+	</dl>
+	<div class="o_d_conbox">
+		<div class="o_d_newstatus">
+			<label>
+				<span>订单编号：${order_no}</span>
+				<font>${create_datetime}</font>
+			</label>
+			<p>状态：<span>{{if status == 0}}待付款{{else status == 1}}已付款{{else status == 2}}已发货{{else status == 3}}已完成{{else status == 4}}已取消{{else status == 5}}已失效{{/if}}</span></p>
+		</div>
+		{{each glist}}
+			<div class="o_d_product">
+				<div class="product_left">
+					<p><a href="#item/${flag}"><img src="${thumb}"/></a><span class="product_tit"><a href="#item/${flag}">${title}</a></span><span>数量：${num}</span></p>
+					{{if $index == 0}}<label>订单金额：<span>${total_price}</span></label>{{/if}}
+				</div>
+				{{if $index == 0}}
+					<div class="product_rig">
+						应付金额：<span>${total_price}</span>
+					</div>
+				{{/if}}
+			</div>
+		{{/each}}
+		{{if status == 0}}
+		<div class="o_d_infor">
+			<label>你还有<span id="time_remaining">{{html $.timeFormat(intval)}}</span>，超时后订单将会自动取消</label>
+			<p>
+				<a href="javascript:;" class="o_d_cancelbtn">取消订单</a>
+				<a href="javascript:;" class="o_d_okbtn" data-no="${order_no}" data-id="${order_id}">立即付款</a>
+			</p>
+		</div>
+		{{/if}}
+	</div>
+	{{if base}}
+		<div class="product_bot">
+			<label>收货地址</label>
+			<p>
+				<span>${base.address_name}</span>
+				<span>${base.address_phone}</span>
+				<span>${express.address_detail}</span>
+			</p>
+		</div>
+		<div class="product_bot">
+			<label>发票信息</label>
+			<p>
+				{{if base.invoice_content==4}}无{{else}}
+					<span>普通纸质发票</span>
+					<span>
+						{{if base.invoice_name=="公司"}}
+							单位
+						{{else}}
+							${base.invoice_name}
+						{{/if}}
+					</span>
+					<span>${base.invoice_notice}</span>
+				{{/if}}
+			</p>
+		</div>
+	{{/if}}
+</script>

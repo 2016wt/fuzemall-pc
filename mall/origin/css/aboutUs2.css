@@ -1,0 +1,114 @@
+
+
+/**
+* aboutUs 
+* simba
+* 2016-04-27
+ */ 
+
+.au-banner{
+	position: relative;
+	width: 100%;
+	height: 628px;
+	background: url('http://cdn.fuzeuser.com/fuzemall/goods/mall/au-banner.png') no-repeat scroll center center #9aabba;
+}
+.au-banner-con{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.55);
+}
+.au-banner-tit{
+	position: absolute;
+	top: 271.5px;
+	left: 50%;
+	margin: 0;
+	margin-left: -170px;
+	width: 340px;
+	font-size: 64px;
+	font-weight: 100;
+	color: #fff;
+	text-align: center;
+}
+.au-banner-tit:before{
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -8px;
+	margin-left: -67px;
+	width: 134px;
+	height: 1px;
+	background-color: #fff;
+}
+
+.au-introduction{
+	margin: 0 auto;
+	width: 1230px;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: center;
+	overflow: hidden;
+}
+.au-intro-tit{
+	position: relative;
+	margin: 0;
+	margin-top: 40px;
+	font-size: 30px;
+	font-weight: 400;
+	letter-spacing: .1em;
+	color: #000;
+}
+.au-intro-tit:before{
+	content: "";
+	position: absolute;
+	bottom: -18px;
+	left: 50%;
+	margin-left: -75px;
+	width: 150px;
+	height: 1px;
+	background-color: #000;
+}
+.au-intro-txt-1,
+.au-intro-txt-2{
+	font-weight: 400;
+	color: #333;
+}
+.au-intro-txt-1{
+	margin-top: 47px;
+	font-size: 16px;
+	line-height: 24px;
+}
+.au-intro-txt-2{
+	margin-top: 29px;
+	font-size: 14px;
+	line-height: 26px;
+}
+
+.au-leader{
+	margin-top: 90px;
+	
+	padding: 0 26px;
+	color: #333;
+}
+.au-leader-list li{
+	float: left;
+	width: 20%;
+	text-align: center;
+	margin-bottom: 100px;
+}
+.au-leader-tit{
+	margin-top: 28px;
+	font-size: 18px;
+}
+.au-leader-tit span{
+	margin: 0 9px; 
+	font-size: 14px;
+}
+.au-leader-txt{
+	margin: 18px auto 0 auto;
+	width: 164px;
+	line-height: 20px;
+	text-align: left;
+	font-size: 12px;
+}

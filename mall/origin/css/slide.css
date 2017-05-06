@@ -1,0 +1,94 @@
+.page_slide{
+	cursor: pointer;
+	position: relative;
+	/*margin-top: -60px;*/
+}
+
+.slides ul{
+	overflow: hidden;
+	position: relative;
+}
+
+.slides ul li{
+	font-size: 0;
+	opacity: 0;
+	transition: opacity .5s;
+	-moz-transition: opacity .5s;		/* Firefox 4 */
+	-webkit-transition: opacity .5s;	/* Safari 和 Chrome */
+	-o-transition: opacity .5s;	    	/* Opera */
+	position: absolute;
+	left: 0px;
+    top: 0px;
+}
+
+.slides ul li.active{
+	opacity: 1;
+}
+
+.slides ul li img{
+	width: 100%;
+}
+
+.slide_wrap{
+	/*height: 100%;*/
+	/*width: 1080px;*/
+	/*position: absolute;*/
+	/*top: 0px;
+	left: 50%;*/
+	/*margin-left: -540px;*/
+}
+
+.slide_wrap .left,.slide_wrap .right{
+	width: 41px;
+	height: 76px;
+	cursor: pointer;
+	opacity: 0;
+	top: 50%;
+    margin-top: -38px;
+}
+
+.slide_wrap .left{
+	position: absolute;
+	background-image: url('../img/q-l.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	left: 40px;
+}
+
+.slide_wrap .right{
+	position: absolute;
+	background-image: url('../img/q-r.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	right: 40px;
+}
+
+.page_slide:hover .slide_wrap .left,.page_slide:hover .slide_wrap .right{
+	opacity: 1;
+}
+
+.dot_wrap{
+	font-size: 0px;
+	bottom: 40px;
+	position: absolute;
+	left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.dot_wrap .dot{
+	display: inline-block;
+	margin: 4px;
+}
+
+.dot_wrap .dot > div{
+	width: 57px;
+	height: 2px;
+	background-color: #5f5f5f;
+	cursor: pointer;
+	margin: 4px;
+}
+
+.dot_wrap .dot.active > div{
+	background-color: #3891ba;
+}

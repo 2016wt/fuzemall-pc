@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Pragma" content="no-cache"> 
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="Expires" content="0"> 
+	<meta name="keywords" content="FUZE,战斧F1,FUZE游戏机,战斧主机,蓝港科技。">
+	<meta name="description" content="FUZE游戏机是由蓝港科技推出的家庭互联网娱乐游戏机，通过技术创新、优质的本地化运营和推陈出新的游戏内容，力争为玩家提供一流的主机级游戏体验。">
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=SwMGWCtwRsXf0t3WVyoHwQzU"></script>
+	<!-- build:css css/main.min.css-->
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/cart.css" />
+	<link rel="stylesheet" href="css/item.css" />
+	<link rel="stylesheet" href="css/order.css" />
+	<link rel="stylesheet" href="css/mycenter.css" />
+	<link rel="stylesheet" href="css/faq.css" />
+	<!-- endbuild -->
+
+	<title>FUZE游戏机-蓝港科技官网</title>
+</head>
+<body>
+	<div id="header">
+	</div>
+	<div id="container">
+		<!-- 内容容器 -->
+	</div>
+	<div id="footer">
+		
+	</div>
+	<div id="global_pop">
+		<div class="pop_box">
+			<div class="pop_close">
+			</div>
+			<!--<div class="pop_title">
+				<div class="pop_title_text"></div>
+			</div> -->
+			<div class="pop_content">
+			</div>
+		</div>
+	</div>
+	<div id="global_msg">
+		<div class="msg_box">
+			<div class="msg_box_msg">
+				<img src="/img/warning.png">
+				<div class="msg_box_wrap">
+					<div class="ensure_del"></div>
+					<div class="message_del"></div>
+				</div>
+			</div>
+			<div class="msg_action_wrap">
+				<div class="btn ok">确认</div>
+				<div class="btn grey">取消</div>
+			</div>
+		</div>
+	</div>
+	<div id="global_temp_msg">
+		<!-- <div class="msg_info"></div> -->
+	</div>
+	<script src="http://cdn.fuzeuser.com/plugins/require.js"></script>
+	<script src="http://cdn.fuzeuser.com/plugins/jquery-1.11.2.min.js"></script>
+	<script src="http://cdn.fuzeuser.com/plugins/jquery.tmpl.min.js"></script>
+	<script src="http://cdn.fuzeuser.com/plugins/pcasunzip.js" defer="defer"></script>
+
+	<script src="js/common/config.js"></script>
+
+	<script type="text/javascript">
+		var _min = "",_version = "";
+	</script>
+
+	<!-- build:js js/common.min.js-->
+	<script src="js/common/fuze-util.js"></script>
+	<script src="js/common/fuze-api.js"></script>
+	<script src="js/common/router.js"></script>
+	<!-- endbuild -->
+	
+	<script type="text/javascript">
+	  	var hash=window.location.hash;
+	  	if(hash.indexOf("orderDetail")!=-1)
+	  	{   var ha="#orderDetail";
+	  		hash=ha+"/"+hash.split("=")[1];
+	  	}
+	    if(!$.isPC()){
+	    	window.location.href = Domain.m+hash;
+	    }
+	
+	</script>
+
+	<script type="text/javascript">
+		if(Debug){
+			$("body").on("click",".login",function(){
+			    $.alertLoginPop();
+			    return false; //debug登录
+			});
+		}else{
+			 _min = ".min.js?v="+$.getVersion();
+			$("body").on("click",".login",function(){
+			   window.location.href = Links.login + "?redirect="+encodeURIComponent(location.href)+"&broker=fuzemall&l=zh-cn";
+			});
+		}
+	</script>
+
+	<!-- build:js js/main.min.js-->
+	<script src="js/main.js"></script>
+	<!-- endbuild -->
+
+	<!-- cnzz统计 -->
+	<div style="display:none">
+		<script src="http://s4.cnzz.com/z_stat.php?id=1259045421&web_id=1259045421" language="JavaScript"></script>
+	</div>
+	<script id="loginPopTemplate" type="text/x-jquery-tmpl">
+		<div class="login_pop">
+			<div class="login_o">
+				<label>用户名：</label>
+				<input type="text" value="" id="login_name" autofocus="autofocus">
+				<div class="errmsg" id="600000">用户名不存在</div>
+			</div>
+			<div class="login_o">
+				<label>密码：</label>
+				<input type="password" value="" id="login_psw">
+				<div class="errmsg" id="600100">密码错误</div>
+			</div>
+			<div class="login_o">
+				<label>验证码：</label>
+				<input type="text" value="" class="login_code" id="login_code">
+				<img src="/front.php?s=/Home/User/imageVerify&type=1" class="img_verify">
+				<div class="errmsg" id="500002">验证码错误</div>
+			</div>
+			<div class="login_o">
+				<div class="btn enterflag" id="login_btn">登录</div>
+				<div class="btn m_r_0" id="rgster_btn">注册</div>
+			</div>
+			<div class="login_o forgot_psw">
+				<a>忘记密码？</a>
+			</div>
+		</div>
+	</script>
+	<script id="registerPopTemplate" type="text/x-jquery-tmpl">
+		<div class="rgster_pop">
+			<div class="rgster_o">
+				<label>用户名：</label>
+				<input type="text" value="" class="rgster_user" autofocus="autofocus" id="rgster_user">
+				<div class="errmsg" id="600000"></div>
+			</div>
+			<div class="rgster_o">
+				<label>设置密码：</label>
+				<input type="password" value="" class="rgster_psw"  id="rgster_psw">
+				<div class="errmsg" id="600100"></div>
+			</div>
+			<div class="rgster_o">
+				<label>确认密码：</label>
+				<input type="password" value="" class="rgster_psw" id="rgster_r_psw">
+				<div class="errmsg" id="600101"></div>
+			</div>
+			<div class="rgster_o">
+				<label>短信验证码：</label>
+				<input type="text" value="" class="rgster_code" id="rgster_code">
+				<input type="button" id="reg_verify" value="获取验证码">
+				<div class="errmsg" id="600200"></div>
+			</div>
+			<div class="rgster_o">
+				<div class="btn rgster btn_180x40 enterflag">注册</div>
+			</div>
+			<div class="rgster_o">
+				<label class="agreement">
+					<input type="checkbox" checked=checked>我已阅读并同意遵守<a>&nbsp;法律申明&nbsp;</a>和<a>&nbsp;隐私条款&nbsp;</a>
+				</label>
+			</div>
+		</div>
+	</script>
+	<script id="payWarnTemplate" type="text/x-jquery-tmpl">
+		<div class="payWarnWrap {{if noimg}}noimg{{/if}}">
+			<img src="img/warn.png">
+			<div class="text">
+				{{if msg}}{{html msg}}{{else}}付款完成前请不要关闭此窗口<br>
+				请根据你的情况选择下面的按钮{{/if}}
+			</div>
+		</div>
+		<div class="pay_btn {{if single}}single{{/if}}">
+			<div class="btn btn_180x40 change">{{if ok}}${ok}{{else}}修改支付方式{{/if}}</div>
+			<div class="btn btn_180x40 cancel">{{if cancel}}${cancel}{{else}}已完成付款{{/if}}</div>
+		</div>
+	</script>
+	<script id="deleteWarnTemplate" type="text/x-jquery-tmpl">
+		<div class="dl_msg">${msg}</div>
+		<div class="dl_btn">
+			<div class="dl_ok btn_140x40 btn no">{{if ok}}${ok}{{else}}确认{{/if}}</div>
+			<div class="dl_cancel btn_140x40 btn">取消</div>
+		</div>
+	</script>
+	<script id="addCartPop" type="text/x-jquery-tmpl">
+		<div class="popmsg okCart">商品已成功加入购物车！</div>
+		<div class="pop_btn okCart_btn">
+			<div class="btn btn_140x40 yellow pop_cancel" style="margin-right:10px;">
+				继续购物
+			</div>
+			<div class="btn btn_140x40 yellow pop_ok">
+				去购物车结算
+			</div>
+		</div>
+	</script>
+	<script id="cancelPopTemplate" type="text/x-jquery-tmpl">
+		<div class="popTitle">
+			好可惜！请您选择取消原因，让我们做得更好！
+		</div>
+		<div class="cancle_order_wrap">
+			<div class="cancel_title">取消原因<span>（*请选择取消原因）</span></div>
+			<ul class="cancelPopUl">
+				<div class="item"><label><input type="radio" name="cancelreson" checked>换其他商品</label></div>
+				<div class="item"><label><input type="radio" name="cancelreson">更换发票信息</label></div>
+				<div class="item"><label><input type="radio" name="cancelreson">产品调价</label></div>
+				<div class="item"><label><input type="radio" name="cancelreson">未使用优惠券</label></div>
+				<div class="item"><label><input type="radio" name="cancelreson">未使用平台币</label></div>
+				<div class="item"><label><input type="radio" name="cancelreson">更改收货信息</label></div>
+				<div class="item"><label><input type="radio" name="cancelreson">我不想买了</label></div>
+				<div class="item"><label><input type="radio" name="cancelreson">其它</label></div>
+			</ul>
+			<div class="cancel_title">描述</div>
+			<textarea class="cancel_textarea" resize="none"></textarea>
+			<div class="ps"><span>*</span>订单取消后将无法恢复</div>
+			<div class="btn_div">
+				<div class="btn_140x40 cancle_ok btn">确定</div>
+				<div class="btn_140x40 cancle_no btn no">取消</div>
+			</div>
+		</div>
+	</script>
+	<script id="user_login" type="text/html">
+        <ul>
+            <li>
+                <span class="white_upicon"></span>
+                <p><a href="order.html" class="myorder_icon">我的订单</a></p>
+                {{if username}}
+                    <p><a href="javascript:;" class="tcdl_btn">退出登录</a></p>
+                {{else}}
+                    <p><a href="javascript:;" class="login_btn">登录/注册</a></p>
+                {{/if}}
+            </li>
+        </ul> 
+    </script>
+	<!--添加&编辑 收货人信息  模板-->
+	<script id="regionTemplate" type="text/x-jquery-tmpl">
+		<div class="region_title">添加新地址</div>
+		<div class="region_o">
+			<label><span>*</span>&nbsp;收&nbsp;&nbsp;货&nbsp;&nbsp;人：</label>
+			<input type="text" id="address_name" value="${address_name}" maxlength="10">
+			<div class="errmsg"></div>
+		</div>
+		<div class="region_o">
+			<div class="region_sub">
+				<label><span>*</span>&nbsp;手机号码：</label>
+				<input type="text" value="${address_phone}" id="address_phone">
+				<div class="errmsg"></div>
+			</div>
+		</div>
+		<div class="region_o region_city">
+			<label><span>*</span>&nbsp;收货地区：</label>
+			<select name="province" id="address_province"></select>
+			<select name="city" id="address_city"></select>
+			<select name="area" id="address_area" class="m_r_0"></select>
+			<div class="errmsg"></div>
+		</div>
+		<div class="region_o region_detail">
+			<label><span>*</span>&nbsp;详细地址：</label>
+			<input type="text" value="${address_detail}" id="address_detail" maxlength="200">
+			<div class="errmsg"></div>
+		</div>
+		<div class="region_default">
+			<p class="{{if address_default}}{{if address_default==1}}active{{/if}}{{/if}}"><span></span>设为默认地址</p>
+		</div>
+		<div class="btn btn_110x38" id="save_addr" data-id="${id}">保存</div>
+	</script>
+
+	<!-- 人工 -->
+	<script src="http://www.sobot.com/chat/pc/pc.min.js?sysNum=3b4362eb8cc149488e0853aa6f37fc07" id="zhichiload" ></script>
+</body>
+</html>

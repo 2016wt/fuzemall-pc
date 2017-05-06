@@ -1,0 +1,26 @@
+<div class="centered" style="background-color:#fff;">
+<!-- 	<div class="success_wrap">
+		成功信息 
+	</div> -->
+	<div class="success_box"></div>
+</div>
+
+<script id="successTemplate" type="text/x-jquery-tmpl">
+	<div class="order_success_ok">
+		{{if status == 1 || status == 2}}
+			<span class="success_okicon"></span>
+			<p class="order_succ_p">您已付款成功</p>
+			<p class="order_money">付款金额：　<span>{{if payment_type != 4}}￥${total_price}{{else}}${total_price}平台币{{/if}}</span></p>
+			<p class="order_shanp">商　　品：　<font>${title}</font></p>
+		{{else}}
+			<span class="success_noticon"></span>
+			<p class="order_succ_font">支付失败　我们没收到相应款项</p>
+			<p class="order_money">付款金额：　<span>￥${total_price}</span></p>
+			<p class="order_shanp">商　　品：　<font>${title}</font></p>
+		{{/if}}
+		<div class="order_btn">
+			<a href="#home" class="btn btn_120x32">返回首页</a>
+			<a href="#mycenter/myorder" class="btn btn_180x32 btn_newblue">查看已购买的商品</a>
+		</div>
+	</div>
+</script>

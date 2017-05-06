@@ -1,0 +1,100 @@
+<div class="centered">
+	<div class="gamepay_wrap">
+		<div class="gamepay_title">您将获得</div>
+		<div class="gamepay_head">
+			<div class="gamepay_mc">名称</div>
+			<div class="gamepay_jg">价格</div>
+			<div class="gamepay_hyj">会员价</div>
+			<div class="gamepay_gljs">关联角色</div>
+			<div class="gamepay_cz">操作</div>
+		</div>
+		<div class="gamepay_list">
+			<img class="loadimg" src="img/load.gif">
+		</div>
+		<div class="gamepay_btn">
+			<div class="btn yellow btn_180x40" onclick="gamepaynow()">
+				去付款
+			</div>
+		</div>
+	</div>
+</div>
+<script id="gamepayTemplate" type="text/x-jquery-tmpl">
+	<ul>
+		{{each cartlist}}
+			<li data-id="${id}" id="gamepayli_${id}" data-title="${title}">
+				<div class="gamepay_mc">
+					<img src="${thumb}">
+					<div class="game_title">${title}</div>
+				</div>
+				<div class="gamepay_jg price">
+					${b_price}平台币<br>
+					（￥${JSON.parse(price).toFixed(2)}）
+				</div>
+				<div class="gamepay_hyj price">
+					${b_price_vip}平台币<br>
+					（￥${JSON.parse(price_vip).toFixed(2)}）
+				</div>
+				<div class="gamepay_gljs">
+					{{if type}}
+						{{if is_bind == 0}}适用于所有角色{{else}}
+							<select data-gid="${gid}" data-produceId="${produceId}">
+								<option value>--请选择--</option>
+								{{each ulist}}
+									<option value="${f_uid}">${f_name}</option>
+								{{/each}}
+							</select>
+							<div class="errmsg">还未给道具设置角色噢</div>
+						{{/if}}
+					{{else}}
+						{{if f_name == ""}}适用于所有角色{{else f_name}}${f_name}{{/if}}
+					{{/if}}				
+				</div>
+				<div class="gamepay_cz">
+					{{if type}}
+						<div class="gamepay_cz_c" data-ids="${id}" data-price="${price}" data-b_price="${b_price}">
+						</div>
+					{{else}}
+						-
+					{{/if}}
+				</div>
+			</li>
+		{{/each}}
+	</ul>
+	<div class="gamepay_js">
+		<div class="total_spze">
+			<label>商品总额：</label>
+			<span class="total_b_price price">${total_b_price}平台币</span>
+			<span class="total_price price">￥${total_price}</span>
+		</div>
+		<div class="total_hyyh">
+			<label>会员优惠：</label>
+			{{if vip == 0}}
+				<span class="price">--</span>
+			{{else}}
+				<span class="total_b_price_vip price">-${total_b_price_vip}平台币</span>
+				<span class="total_price_vip price">-￥${total_price_vip}</span>
+			{{/if}}
+		</div>
+		<span>付款方式:</span>
+		<select>
+			<option value="4">平台币&nbsp;&nbsp;</option>
+			<option value="1">支付宝&nbsp;&nbsp;</option>
+			<option value="3">微信支付&nbsp;&nbsp;</option>
+		</select>
+		<label class="game_yue">余额：</label>
+		<span class="gamepay_ye game_yue">
+			${account_fund}平台币
+		</span>
+		<label style="font-size:14px;">应付总额：</label>
+		<span class="gamepay_ze total_b_price_final">${total_b_price_final}平台币</span>
+		<span class="gamepay_ze total_price_final">￥${total_price_final}</span>
+	</div>
+</script>
+
+<script id="vipBuyPopTemplate" type="text/x-jquery-tmpl">
+	<div class="dl_msg"><img src="img/warn2.png">${msg}</div>
+	<div class="dl_btn t_a_c">
+		<div class="dl_ok btn_180x40 btn">看看别的</div>
+	</div>
+</script>
+

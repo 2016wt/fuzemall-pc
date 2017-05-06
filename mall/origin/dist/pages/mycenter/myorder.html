@@ -1,0 +1,142 @@
+<div class="c_order_wrap" id="myorder">
+	<dl class="news_contit">
+		<dt>我的订单</dt>
+		<dd>
+			<a href="javascript:;" data-status=0>全部订单</a>
+			<span>|</span>
+			<a href="javascript:;" data-status=1>待支付</a>
+			<span>|</span>
+			<a href="javascript:;" data-status=2>待收货</a>
+			<span>|</span>
+			<a href="javascript:;" data-status=3>已完成</a>
+			<span>|</span>
+			<a href="javascript:;" data-status=4>已取消</a>
+		</dd>
+	</dl>
+	<div class="order_table">
+		<div class="c_order_head">
+			<div class="c_order_ddxx">
+				订单信息
+			</div>
+			<!-- <div class="c_order_shr">
+				收货人
+			</div> -->
+			<div class="c_order_time">
+				下单时间
+			</div>
+			<div class="c_order_ddje">
+				订单总额
+			</div>
+			<div class="c_order_status">
+				状态
+			</div>
+			<div class="c_order_cz">
+				操作
+			</div>
+		</div>
+		<div class="c_order_content">
+			<ul class="c_order_content_ul">
+			</ul>
+		</div>
+		<div id="Pagination" class="pagination"><!-- 这里显示分页 --></div>
+	</div>
+	<div id="hiddenresult" style="display:none;">
+		<!-- 前端分页隐藏域 -->
+	</div>
+</div>
+
+<!-- 订单状态 0=>未付款 1=>已付款 2=>已发货 3=>已完成 4=>已取消 -->
+<script id="orderListTemplate" type="text/x-jquery-tmpl">
+	{{each list}}
+		<div class="pg_result pgresult_list">
+			{{each sublist}}
+				<li>
+					<div class="c_order_listop">
+						<div class="c_order_no">
+							<label>订单编号：</label>
+							<span><a data-id="${order_id}">${order_no}</a></span>
+						</div>
+						<div class="c_order_time pgDadaTime">
+							${create_datetime}
+						</div>
+						<div class="c_order_ddje pgDdje">
+							<span>¥${total_price}</span>
+						</div>
+						<div class="c_order_status pgStatus">
+							{{if status == 0}}未付款{{else status == 1}}已付款{{else status == 2}}已发货{{else status == 3}}已完成{{else status == 4}}已取消{{else status == 5}}已失效{{/if}}
+							<div class="sqtk_info">
+							{{if rf_status}}
+								{{if is_refund == 1}}
+									
+									{{if rf_status == 0}}退款审核中...
+										{{else rf_status == 1}}退款审核成功
+										{{else rf_status == 2}}退款审核失败，请联系客服
+										{{else rf_status == 3}}已退款到您的支付账户中
+									{{/if}}
+									
+								{{/if}}
+							{{/if}}
+							</div>
+						</div>
+						<div class="c_order_cz">
+							<table class="pg_table">
+							<tr>
+								<td>
+									{{if status == 0}}
+										<div><a class="c_order_qfk" data-id="${order_id}">立即付款</a></div>
+									{{/if}}
+									{{if has_material == 1}}
+										{{if status == 2}}
+											<div><a class="c_order_qrsh" data-id="${order_id}">确认收货</a></div>
+											<div style="display:none;"><a class="c_order_sqsh" data-no="${order_no}">申请售后</a></div>
+											<div><a class="c_order_ckwl" data-id="${order_id}">查看物流</a></div>
+										{{/if}}
+										{{if status == 3}}
+											<div><a class="c_order_sqsh" data-no="${order_no}">申请售后</a></div>
+										{{/if}}
+										<div><a class="c_order_ddxq" data-id="${order_id}">订单详情</a></div>
+										{{if status == 1 && is_refund == 0 && total_price !="0.00"}}
+											<div><a class="c_order_sqtk" data-id="${order_id}">申请退款</a></div>
+										{{/if}}
+									{{/if}}
+									{{if status == 0}}
+										<div><a class="c_order_qxdd qxd_btn" data-id="${order_id}">取消订单</a></div>
+									{{/if}}
+									
+								</td>
+							</tr>
+							</table>
+						</div>
+					</div>		
+					{{each glist}}
+						<div class="c_order_detail">
+							<div class="c_order_thumbs c_order_ddxx">			
+								<a href="index.html#item/${flag}" target="_blank"><img src="${thumb}"></a>
+								<div class="title"><a href="index.html#item/${flag}" target="_blank">${title}</a></div>
+								<div class="flag_name">${flag_name}</div>
+								{{if type==1}}<div class="num"><label>数量：</label><span>${num}</span></div>{{/if}}
+							</div>	
+						</div>
+					{{/each}}
+				</li>
+			{{/each}}
+		</div>
+	{{/each}}
+</script>
+
+
+<script id="returnPopTemplate" type="text/x-jquery-tmpl">
+	<div class="popTitle">
+		请选择需要退还的商品
+	</div>
+	<ul class="returnPopUl">
+		{{each glist}}
+			<li>
+				<img src="${thumb}" style="width:100px;height:100px;">
+				<div class="ckxq {{if status!=0}}disable{{/if}}" data-gid="${gid}" data-id="${order_id}" data-flag="${g_a_flag}">
+					<a>申请</a>
+				</div>
+			</li>
+		{{/each}}
+	</ul>
+</script>

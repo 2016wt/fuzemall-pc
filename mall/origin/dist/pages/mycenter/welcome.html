@@ -1,0 +1,56 @@
+<div class="member_peo" id="welcome">
+	<!-- welcome信息 -->
+</div>
+
+<script type="text/x-jquery-tmpl" id="welcomeTemplate">
+	<dl class="membpeo_top">
+		<dt>
+			<p>欢迎<span>${username}</span>回来</p>
+			<div id="membpeo_detail"></div>
+		</dt>
+		<dd>
+			<div>
+				<label>
+					<span></span>
+					<p>平台币：<font>0</font></p>
+				</label>
+				<a href="javascript:;" data-openurl="pay/recharge.html">平台币充值</a>
+			</div>
+		</dd>
+	</dl>
+	<dl class="menbpeo_order">
+		<dt>
+			<div>
+				<span></span>
+				<p>全部订单：<font>${order_total_num}</font></p>
+				<a href="#mycenter/myorder?pIndex=0">查看全部订单　></a>
+			</div>
+		</dt>
+		<dd>
+			<div>
+				<span></span>
+				<p>待支付订单：<font>${unpay_total_num}</font></p>
+				<a href="#mycenter/myorder?pIndex=1">查看待支付订单<font>></font></a>
+			</div>
+		</dd>
+	</dl>
+</script>
+
+<script type="text/x-jquery-tmpl" id="bindTemplate">
+	<div class="bind_box">
+		<span class="bind_phone"></span>
+		{{if phone}}
+			已绑定手机：${phone}
+		{{else}}
+			<a class="bind" href="javascript:void(0);">绑定手机</a>
+		{{/if}}
+	</div>
+	<div class="bind_box">
+		<span class="bind_mail"></span>
+		{{if email}}
+			已绑定邮箱：${email}
+		{{else}}
+			<a class="bind" href="javascript:void(0);">绑定邮箱</a>
+		{{/if}}
+	</div>
+</script>

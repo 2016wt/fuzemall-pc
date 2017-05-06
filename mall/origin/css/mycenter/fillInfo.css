@@ -1,0 +1,124 @@
+.hh_topwrap{
+	padding: 30px 0px 0px 225px;
+	font-size: 12px;
+	font-family: "宋体";
+}
+
+.hh_top_row{
+	margin-bottom: 25px;
+}
+
+.hh_top_value{
+	color: #29485f;
+}
+
+.hh_top_key,.hh_top_value{
+	display: inline-block;
+}
+
+#kddh{
+	width: 200px;
+}
+
+.myinput{
+	background-color: #eff2f2;
+	height: 30px !important;
+	line-height: 30px !important;
+}
+
+.myselect,.hh_top_key,.myinput{
+  	color: #29485f;
+}
+
+.star{
+	color: #fe0024;
+}
+
+.hh_sec_key,.hh_sec_value{
+	display: inline-block;
+}
+
+.hh_sec_key{
+	width: 265px;
+	text-align: right;
+}
+
+.hh_sec_value{
+
+}
+
+#ssdd{
+	width: 400px;
+}
+
+.hh_sec_row{
+	margin-top: 20px;
+}
+
+.hh_btn{
+	margin: 0 auto;
+	bottom: 50px;
+	position: relative;
+	margin-top: 180px;
+}
+
+.hh_secwrap{
+	font-size: 12px;
+	font-family: "宋体";
+}
+
+.hh_sec_key.v_a_t{
+	padding-top: 8px;
+}
+
+#hh_name,#hh_tel{
+	width: 150px;
+}
+
+.errmsg{
+	margin-left: 0px;
+}
+/*new*/
+
+.w_express_info label,.w_address label{
+	color: #5e839e;
+	width: 70px;
+	display: inline-block;
+}
+
+.w_express_info > div,.w_address > div{
+	margin-bottom: 10px;
+}
+
+#fillInfo select,#fillInfo input[type='text']{
+	height: 36px;
+	width: 226px;
+	line-height: 36px;
+	padding-left: 10px;
+}
+
+#fillInfo .w_address select{
+	width: auto;
+}
+
+#fillInfo input[type="text"].xxdz{
+	width: 400px;
+} 
+
+#txwlxx{
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#txshdz{
+	padding-top: 20px;
+}
+
+#txwlxx,#txshdz{
+	display: none;
+}
+
+#fillbtn{
+	margin-top: 30px;
+	margin-left: 75px;
+}

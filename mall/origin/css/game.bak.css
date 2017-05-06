@@ -1,0 +1,150 @@
+
+/**
+*   game
+*   simba
+*   2016-04-11
+*/
+body{
+    background-color: #fff;
+}
+.game-video-box{
+    position: relative;
+    width:100%;
+    min-height: 419px;
+    background-color: #000;
+    z-index: 9;
+}
+.game-video-news{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    min-height: 419px;
+    height:100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 10;
+}
+.game-video-txt{
+    margin: 20% auto 0 auto;
+    width: 740px;
+    line-height: 24px;
+    font-size: 16px;
+    color: #fefefe;
+    font-weight:100;
+}
+.game-video-play{
+    display: block;
+    margin: 30px auto 0 auto;
+    width:80px;
+    height: 80px;
+    background: url("../img/game-video-play.png") scroll no-repeat 0 0;
+    transition: background 0.7s;
+    -moz-transition: background 0.7s;
+    -webkit-transition: background 0.7s;
+    -o-transition: background 0.7s;
+}
+.game-video-play:hover{
+    background-image: url("../img/game-video-play-hover.png");
+}
+
+.game-example-top{
+    height:200px;
+    line-height: 200px;
+    background-color: #fff;
+    text-align: center;
+    color: #333333;
+    font-weight: 100;
+    overflow: hidden;
+}
+.game-example-top h2{
+    padding-top: 20px;
+    font-size: 30px;
+    font-weight: 100;
+}
+.game-example-top p{
+    font-size: 14px;
+    line-height:20px;
+    line-height:24px;
+}
+.game-example-top .mt20{
+    margin-top: 20px;
+}
+
+.game-example-list img{
+    position: relative;
+    text-align: center;
+    -moz-transition: transform 5s ease-out;
+    -webkit-transition: transform 5s ease-out;
+    -o-transition: transform 5s ease-out;
+    transition: transform 5s ease-out;
+}
+
+.game-example-list img.active{
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.game-example-list li{
+    background-color: #101010;
+    position: relative;
+    overflow: hidden;
+}
+.game-example-list li.bg1{
+    background-color: #1e142a;
+}
+.game-example-list li.bg2{
+    background-color: #000;
+}
+.game-example-list .game-example-news{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: -565px;
+    padding: 0 50px;
+    color: #fff;
+}
+
+
+.game-example-news h3{
+    margin: 0;
+    font-size: 30px;
+    font-weight:600;
+}
+.game-example-news p{
+    margin-top: 30px;
+    width: 410px;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.game-read-more{
+    display: block;
+    margin:40px auto 0 auto;
+    width: 150px;
+    height: 40px;
+    line-height:40px;
+    border:2px solid #fff;
+    border-radius:20px;
+    font-size: 14px;
+    font-weight: 100;
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+    transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+.game-read-more:hover{
+    border-color: #9ea380;
+    color: #9ea380;
+}
+
+
+/*ie 8 兼容*/
+.gwl-h1 li{
+    min-width: 1230px;
+    height: 900px;
+}

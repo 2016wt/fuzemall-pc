@@ -1,0 +1,126 @@
+<script src="plugins/html5media.min.js"></script>
+<link type="text/css" rel="stylesheet" href="mall/css/video-js.css?v=1.0.3">
+<link type="text/css" rel="stylesheet" href="mall/css/gameItem.css?v=1.0.3">
+<div class="gameItem_wrap">
+	<div class="game_toptit">
+		<dl>
+			<dt class="">游戏详情</dt>
+			<dd>
+				<a class="returnList" href="#gameList">< 返回游戏列表</a>
+				<input placeholder="请输入关键词搜索" type="text">
+				<a class="search" href="javascript:;"></a>
+			</dd>
+		</dl>
+	</div>
+	<div class="gameItem_content">
+		<div class="gc_wrap">
+			<!-- 游戏详情 -->
+		</div>
+		<div class="gameItem_slide">
+			<div class="gameItem_slide_wrap">
+				<!-- 缩略图 -->
+			</div>
+			<div class="gameItem_dlc">
+				<!-- DLC list -->
+			</div>
+			<div class="gameItem_tjyx">
+				<div class="gt_title">
+					推荐游戏<span><a href="#gameList">更多></a></span>
+				</div>
+
+				<div class="gt_content">
+					<!-- 推荐游戏 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script id="gameDetailTemplate" type="text/x-jquery-tmpl">
+	<div class="gameItem_thumb">
+		<img src="${resUrl}&op=imageView2&mode=1&width=152&height=205">
+	</div>
+	<div class="gameItem_detail">
+		<div class="gd_title">
+			${title}<span>${appType}</span>
+			{{if false}} <label>{{if price != 0}}完整版价格：${price}{{else}}免费{{/if}}</label> {{/if}}
+		</div>
+		<div class="gd_content">
+			<div class="gdc_left">
+				${$.cutString(appDesc,410)}
+			</div>
+			<!--<div class="gdc_right">
+				{{if true}}
+					<div class="mybtn m_t_20 disable" data-produceid="${produceId}" data-gid="${gid}" data-type=2>敬请期待</div>
+				{{else}}
+					<div class="mybtn m_t_20" data-produceid="${produceId}" data-gid="${gid}" data-type=2>立即购买</div>
+					<div class="mybtn add m_t_15" data-produceid="${produceId}" data-gid="${gid}" data-type=2>加入购物车</div>
+				{{/if}}
+			</div>-->
+		</div>
+	</div>
+</script>
+
+<script id="gameResTemplate" type="text/x-jquery-tmpl">
+	<div class="gs_big video">
+		<img src="${list[0].resUrl}?op=imageView2&mode=3&width=1000&height=564">
+		<div class="video_mask">
+			<video id="video" src="" controls="controls" preload autoplay="autoplay"></video>
+		</div>
+	</div>	
+	<div class="gs_thumb">
+		<div id="gs_prev"></div>
+		<div class="ulwrap">
+			<ul>
+				{{each list}}
+					<li class="{{if $index==0}}active{{/if}}" data-index=${$index} data-src="${resUrl}" data-type="${resType}">
+						<img src="${resUrl}?op=imageView2&mode=3&width=186&height=104">
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div id="gs_next"></div>
+	</div>
+</script>
+
+<script id="gameDlcTemplate" type="text/x-jquery-tmpl">
+	{{if list.length >0}}
+		<div class="gdlc_title">
+			游戏DLC
+		</div>
+		<div class="gdlc_content">
+			<ul>
+				{{each list}}
+					<li style="{{if $index%2 == 0}}margin-right: 60px;{{/if}}">
+						<div class="gdlc_thumb">
+							<img src="${produceUrl}?op=imageView2&mode=3&width=1000&height=564">
+						</div>
+						<div class="gdlc_c">
+							<div class="title">${produceName}<span>￥${price}</span></div>
+							<div class="content">
+								${$.cutString(produceDes,140)}
+							</div>
+							{{if true}}
+								<div class="mybtn small disable" data-produceid="${produceId}" data-gid="${gid}"  data-type=4>敬请期待</div>
+							{{else}}
+								<div class="mybtn small" data-produceid="${produceId}" data-gid="${gid}"  data-type=4>立即购买</div>
+							{{/if}}
+						}
+						</div>
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+	{{/if}}
+</script>
+
+<script id="reGameTemplate" type="text/x-jquery-tmpl">
+	<ul>
+		{{each list}}
+			<li style="{{if $index==3}}margin-right:0;{{/if}}" data-id=${gid}>
+				<img src="${resUrl}&op=imageView2&mode=3&width=234&height=314">
+				<span>${title}</span>
+			</li>
+		{{/each}}
+	</ul>
+</script>

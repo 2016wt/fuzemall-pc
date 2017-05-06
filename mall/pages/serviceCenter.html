@@ -1,0 +1,110 @@
+
+<!-- h1 -->
+<h1 class="sc-head">官方资讯</h1>
+
+<!-- 热门问题 -->
+<div class="sc-con sc-question">
+	<h2 class="sc-tit">热门问题</h2>
+	<!-- load GIF -->
+	<div class="sc-hotIssue-load"><img src="img/loading.gif"></div>
+	<!-- 问题列表 -->
+	<ul class="sc-question-list" id="hotIssueList"></ul>
+	<!-- 问题模板 -->
+	<script id="hotIssueTem" type="text/x-jquery-tmpl">
+		{{each list}}
+			<li>
+				<a href="javascript:" data-state="0" id="${fid}">${question}</a>
+				<p class="sc-hotIssue-result">A：${answer}</p>
+			</li>
+		{{/each}}
+	</script>
+	<!-- <a class="sc-see-more" href="javascript:">查看常见问题</a> -->
+</div>
+
+<!-- 服务渠道 -->
+<div class="sc-con">
+	<h2 class="sc-tit">服务渠道</h2>
+	<!-- 问题列表 -->
+	<ul class="sc-serve-list clearfix">
+		<li>
+			<div class="sc-serve-con">
+				<div class="sc-serve-top sc-serve-top-bg1">
+					<p class="mt5">客服电话</p>
+					<p>400-646-1616</p>
+				</div>
+				<p class="mt22">服务时间：周一至周日9:00—20:30</p>
+			</div>
+		</li>
+		<li class="w38_">
+			<div class="sc-serve-con">
+				<div class="sc-serve-top sc-serve-top-bg2">
+					<p class="mt5">在线客服</p>
+					<p><a class="sc-btn" id="onLine-btn" href="javascript:">点此咨询</a></p>
+				</div>
+				<p class="mt22 tc">服务时间：周一至周日9:00—20:30</p>
+			</div>
+		</li>
+		<li>
+			<div class="sc-serve-con brNone">
+				<div class="sc-serve-top sc-serve-top-bg3">
+					<p class="mt5">留言服务</p>
+					<p><a class="sc-btn" id="goToMessage" href="javascript:">点此留言</a></p>
+				</div>
+				<p class="mt22 tc">服务时间：24小时内处理</p>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<!-- 我的提问 -->
+<div class="sc-con mb60">
+	<h2 class="sc-tit">我的提问</h2>
+
+	<div class="sc-my-question">
+		<!-- 未登录显示内容 -->
+		<div class="sc-myIssue-noneLogin">
+			<p>登录后可查看我的提问</p>
+		</div>
+		
+		<!-- 登陆显示内容 -->
+		<div class="sc-myIssue-doneLogin">
+			<!-- 问题状态 -->
+			<ul class="sc-question-state clearfix">
+				<li><a class="choo" issue-status=0 href="javascript:">全部</a></li>
+				<li><a issue-status=1 href="javascript:">已解决</a></li>
+				<li><a issue-status=2 class="brNone" href="javascript:">待解决</a></li>
+			</ul>
+			<!-- load GIF -->
+			<div class="sc-myIssue-load"><img src="img/loading.gif"></div>
+			<!-- 问题列表 -->
+			<ul class="sc-question-list sc-my-question-list sc-myIssue-done" id="myIssueList"></ul>
+			<!-- 我的问题模板 -->
+			<script id="myIssueTem" type="text/x-jquery-tmpl">
+				{{if list.length > 0}}
+					{{each list}}
+						<li class="clearfix" id="${tid}" >
+							<a href="javascript:">${question}</a>
+							<span class="w160">${type_name}</span>
+							<span class="w250">${add_time}</span>
+							<span class="w88">{{if status == 1 }} 已解决 {{else status == 2 }} 待解决 {{/if}}</span>
+						</li>
+					{{/each}}
+				{{else}}
+					<!-- 无问题显示内容 -->
+					<p class="sc-myIssue-none">暂无提问！</p>
+				{{/if}}
+			</script>
+			<!-- 分页 -->
+			<div class="pagination sc-myIssue-done" id="pagination">
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 在线客服 -->
+<script type="text/javascript">
+	$("#onLine-btn").on("click",function(){
+		$("#zhichiBtn img").trigger("click");
+	});
+</script>

@@ -1,0 +1,292 @@
+.schedule_pic{
+	height: 140px;
+	border-bottom: 1px solid #e6e6e6;
+	margin-bottom: 30px;
+}
+
+.schedule_head{
+	color: #29485f;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 10px;
+	background-image: url('/mall/img/scd.png');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+
+.sub_node{
+	width: 135px;
+	float: left;
+	margin-right: 25px;
+	height: 55px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('/mall/img/schedule.png');
+	margin-top: 26px;
+}
+
+.sub_node span{
+	font-size: 14px;
+	color: #a6a7a8;
+	display: block;
+	white-space: nowrap;
+	margin-top: 70px;
+}
+
+.sub_node.active span{
+	color: #1eb7c5;
+}
+
+.sub_node.ssz{
+	margin-left: 85px;
+	background-position: 0 -3px;
+}
+
+.sub_node.ssz.active{
+	margin-left: 85px;
+	background-position: -175px -66px;
+}
+
+.sub_node.shtg{
+	background-position: 0px -66px;
+}
+
+.sub_node.shtg.active{
+	background-position: -175px -66px;
+}
+
+.sub_node.shz{
+	background-position: 0px -132px;
+}
+
+.sub_node.shz.active{
+	background-position: -175px -132px;
+}
+.sub_node.ghz {
+	background: url(/mall/img/ghzicon.png) no-repeat;
+}
+.sub_node.ghz.active {
+	background: url(/mall/img/ghz_icon.png) no-repeat;
+}
+
+.sub_node.tkz{
+	background-position: 0 -198px;
+}
+
+.sub_node.tkz.active{
+	background-position: -175px -198px;
+}
+
+.sub_node.tkwc{
+	background-position: 0 -266px;
+	width: 55px;
+}
+
+.sub_node.tkwc.active{
+	background-position: -175px -266px;
+	width: 55px;
+}
+.sub_node.fxwc {
+	width: 55px;
+	background: url('/mall/img/yjh.png') no-repeat;
+}
+.sub_node.fxwc.active {
+	background: url('/mall/img/yjh_now.png') no-repeat;
+}
+.sub_node.fxz {
+	background: url('/mall/img/fxz.png') no-repeat;
+}
+.sub_node.fxz.active {
+	background: url('/mall/img/fxz_now.png') no-repeat;
+}
+.schedule_nodes{
+	margin-top: -20px;
+}
+
+.schedule_nodes_t{
+	color: #29485f;
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 40px;
+	margin-left: 2px;
+	background-image: url('/mall/img/circle_0.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+	min-height: 20px;
+}
+
+.unpassed .schedule_nodes_t,.current .schedule_nodes_t{
+	background-image: url('/mall/img/circle_1.png');
+}
+
+.schedule_nodes_time{
+	width: 150px;
+	color: #29485f;
+	font-size: 14px;
+	line-height: 20px;
+	padding-left: 25px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.current .schedule_nodes_time{
+	background-image: url('/mall/img/r_p.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+.schedule_nodes_c{
+	font-size: 12px;
+	color: #717f8a;
+	line-height: 20px;
+	padding-left: 28px;
+	margin-left: 10px;
+	border-left: 4px solid #29495f;
+	min-height: 40px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
+.schedule_nodes_c.over{
+	border-left: 0px;
+	padding-left: 32px;
+}
+
+.schedule_nodes_n{
+	display: inline-block;
+	max-width: 470px;
+}
+
+.schedule_nodes_o{
+	position: relative;
+}
+
+.schedule_nodes_o.current .schedule_nodes_t{
+	color: #23aeb3;
+}
+
+.unpassed .schedule_mask{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(255,255,255,0.6);
+}
+
+.schedule_nodes_kd{
+	margin-top: 10px;
+	padding: 20px 30px 1px 30px;
+	background-color: #edf4f7;
+}
+
+.schedule_nodes_kd_o{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #29485f;
+	padding-bottom: 20px;
+	border-left: 1px solid #94a1a5;
+	position: relative;
+}
+
+.schedule_nodes_kd_o .schedule_nodes_kd_t{
+	line-height: 20px;
+}
+
+.schedule_nodes_kd_t{
+	background-image: url('/mall/img/dot_big.png');
+	background-repeat: no-repeat;
+	background-position: left 6px;
+	padding-left: 22px;
+	margin-left: -5px;
+	top: -6px;
+  	position: relative;
+}
+
+.old .schedule_nodes_kd_t{
+	background-image: url('/mall/img/dot_small.png');
+	margin-left: -4px;
+}
+
+.schedule_nodes_kd_d{
+	padding-left: 17px;
+	position: relative;
+  	top: -6px;
+}
+
+.old.schedule_nodes_kd_o{
+	color: #79838b;
+}
+
+.schedule_span{
+	color:#29485f;
+	font-size:12px;
+	font-weight: bold; 
+}
+
+.schedule_span a{
+	cursor: pointer;
+}
+
+.schedule_span a:hover{
+	text-decoration: underline;
+}
+
+.schedule_node_wrap{
+	min-height: 95px;
+	border-left: 1px #e6e6e6 solid;
+	margin-left: 30px;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+.schedule_node_i{
+	border: 1px solid #e6e6e6;
+	padding: 18px 0 0 18px;
+    margin-left: 40px;
+    color: #a6a7a8;
+    font-size: 12px;
+    position: relative;
+}
+
+.schedule_node_i > div{
+	margin-bottom: 15px;
+}
+
+.schedule_node_i span{
+	color: #46484a;
+}
+
+.schedule_node_title{
+	color: #3c3c3c;
+	font-size: 14px;
+}
+
+.schedule_dot{
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	color: #acadae;
+	position: absolute;
+	background-image: url("/mall/img/dot.png");
+	left: -15px;
+}
+
+.schedule_node_wrap.active .schedule_dot{
+	background-image: url("/mall/img/dot_active.png");
+	color: #fff;
+}
+
+.schedule_node_wrap.active .schedule_node_i{
+	border-color: #1eb7c5;
+}
+
+#sch_ckwl,#sch_txwlxx{
+	position: absolute;
+	bottom: 0px;
+	right: 30px;
+}

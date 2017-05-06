@@ -1,0 +1,224 @@
+*{
+	padding: 0;
+	margin:0;
+}
+.address_manag {
+	background: #fff;
+}
+.c_addr_detail{
+	height: 140px;
+	padding: 15px;
+	margin-top: 47px;
+	position: relative;
+	background-color: #fff;
+	box-shadow: 0 0 21px rgba(12,51,92,0.04);
+}
+
+.default_addr{
+	height: 40px;
+	width: 148px;
+	background-color: #c4d1db;
+	line-height: 40px !important;
+	text-align: center;
+	font-size: 12px;
+	color: #29485f;
+	position: absolute;
+	top: 0px;
+	right: 93px;
+	display: none;
+}
+
+.c_addr_detail div{
+	line-height: 20px;
+}
+
+.c_addr_detail.active .default_addr{
+	display: block;
+}
+
+.c_addr_detail.active .swmr_li{
+	display: none;
+}
+
+.c_addr_detail_title{
+	margin-bottom: 16px;
+	font-size: 14px;
+}
+
+.c_addr_detail_title .c_addr_label{
+	width: auto;
+}
+
+.c_addr_detail_title .c_addr_value{
+	font-weight: bold;
+}
+
+.c_addr_label,.c_addr_value{
+	display: inline-block;
+	color: #29485f;
+}
+
+.c_addr_label{
+	width: 100px;
+	text-align: right;
+	color: #7d848a;
+}
+
+.c_addr_cz{
+	position: absolute;
+	right: 17px;
+	height: 40px;
+	bottom: 13px;
+}
+
+/*.c_addr_cz ul{
+	display: none;
+}*/
+
+.c_addr_cz ul li{
+	display: inline-block;
+	
+}
+
+.c_addr_cz ul li a{
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.c_addr_cz ul li a:hover{
+	color: #23aeb3;
+}
+
+/*.c_addr_detail:hover ul{
+	display: block;
+}*/
+
+.c_addr_detail .c_addr_del{
+	height: 40px;
+	line-height: 40px;
+	width: 80px;
+	text-align: center;
+	background-color: #29485f;
+	border-radius: 3px;
+	display: block;
+	color: #fff;
+	font-size: 14px;
+	margin-left: 36px;
+}
+
+.c_addr_detail .c_addr_del:hover{
+	background-color: #21292f;
+}
+
+#center_right{
+	/*background-color: transparent;*/
+	border-radius: 0px;
+	box-shadow: 0 0 0 #fff;
+}
+
+.address_info{
+	color: #717f8a;
+	font-size: 12px;
+	font-family: "宋体";
+}
+
+.c_addr_btn .btn{
+	display: inline-block;
+	width: 140px;
+	background: #1eb7c5;
+	border-color: #1eb7c5;
+}
+
+.c_addr_btn span{
+	color: #fd4a4a;
+}
+
+.address_info{
+	display: inline-block;
+	padding-left: 15px;
+}
+
+.c_addr_head {
+	display: block;
+	line-height: 30px;
+	overflow: hidden;
+	background: #f0f1f3;
+	margin-top: 30px;
+}
+.c_addr_head div {
+	display: inline-block;
+	text-align: center;
+	height: 30px;
+	vertical-align: top;
+	color: #29485f;
+}
+.c_addr_hone {
+	width: 120px;
+}
+.c_addr_htwo {
+	width: 150px;
+}
+.c_addr_hthr {
+	width: 300px;
+}
+.c_addr_hfou {
+	width: 194px;
+}
+.c_addr_hsix {
+	width: 80px;
+}
+.c_addr_list {
+	display: block;
+	overflow: hidden;
+	border-bottom: 1px solid #e6e6e6;
+}
+.c_addr_list p {
+	display: inline-block;
+	padding:18px 0;
+	text-align: center;
+	color: #5e839e;
+	font-size: 12px;
+	vertical-align: middle;
+	line-height: 22px;
+
+}
+.c_addr_list .c_addr_hfou {
+	visibility: hidden;
+}
+.c_addr_list.active .c_addr_hfou {
+	visibility: visible;
+}
+.c_addr_list .c_addr_hthr {
+	text-align: left;
+}
+.c_addr_hthr span {
+	display: block;
+	padding:0 44px;
+}
+.c_addr_hsix a {
+	display: inline-block;
+	text-align: left;
+	padding-left: 20px;
+	cursor: pointer;
+}
+.c_addr_hsix a:hover {
+	color: #fd4a4a;
+}
+.c_addr_set {
+	background: url(/mall/img/seticon.png) left center no-repeat;
+}
+.c_addr_set:hover {
+	background: url(/mall/img/seticon_h.png) left center no-repeat;
+}
+.c_addr_del {
+	background: url(/mall/img/delete_icon.png) left center no-repeat;
+}
+.c_addr_del:hover {
+	background: url(/mall/img/delete_icon_h.png) left center no-repeat;
+}
+.region_o select {
+	padding:0 5px;
+}
+.btn_110x38 {
+	margin-left: 85px;
+}

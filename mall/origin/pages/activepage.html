@@ -1,0 +1,130 @@
+	<!-- 活动页面 -->
+	<!-- 防止样式覆盖 -->
+		<style type="text/css">
+			body{
+				background-color: #fff;
+			}
+		</style>
+
+
+<!-- game banner -->
+<div class="game-banner">
+	<!-- banner pic -->
+	<ul class="activepage-banner">
+		
+	</ul>
+	<!-- banner tip -->
+	<!-- <ul class="game-banner-tip-list"></ul> -->
+</div>
+
+<!-- game txt -->
+<div class="game-txt">
+	<div class="gameintro-txt">
+		<p class="activeintro">活动介绍</p>
+		<div class="txtcontent">
+		</div>
+	</div>
+	<a href="/index.html#item/f1" target="_blank" class="buyfuzebtn" target="">购买FUZE游戏机</a>
+</div>
+
+<!-- award content -->
+<div class="activepage-content">
+	<div class="content">
+		<div class="awardset">奖品设置</div>
+		<div class="awardlist awardcon">
+			
+		</div>
+	</div>
+	<div class="content">
+		<div class="activeRules">活动规则</div>
+		<div class="awardlist rulescon">
+			
+		</div>
+	</div>
+	<div class="content">
+		<div class="winnerList">获奖名单</div>
+		<div class="awardlist winlist">
+		
+		</div>
+		<div class="checkago" data-page="1">点击查看往期名单</div>
+	</div>
+</div>
+<!-- 奖品设置 -->
+<script id="awardset_tmpl" type="text/x-jquery-tmpl">
+{{each(i,v) list}}
+	{{if i==0}}
+		<dl>
+			<dt><img src="${image}" alt=""></dt>
+			<dd><p>${v.prize_name}</p></dd>
+			<dd><span>${v.prize}</span></dd>
+			<div class="sj"><i>1</i></div>
+		</dl>
+	{{else i==1}}
+		<dl>
+			<dt><img src="${image}" alt=""></dt>
+			<dd><p>${v.prize_name}</p></dd>
+			<dd><span>${v.prize}</span></dd>
+			<div class="sj"><i>2</i></div>
+		</dl>
+	{{else i==2}}
+		<dl>
+			<dt><img src="${image}" alt=""></dt>
+			<dd><p>${v.prize_name}</p></dd>
+			<dd><span>${v.prize}</span></dd>
+			<div class="sj"><i>3</i></div>
+		</dl>
+	{{else}}
+		<dl>
+			<dt><img src="${image}" alt=""></dt>
+			<dd><p>${v.prize_name}</p></dd>
+			<dd><span>${v.prize}</span></dd>
+		</dl>
+	
+	{{/if}}
+	
+ {{/each}}      
+</script>
+<script id="activebanner_tmpl" type="text/x-jquery-tmpl">
+	<li style="background-image: url(${web_banner})"></li>
+	
+</script>
+<script id="activewinner_tmpl" type="text/x-jquery-tmpl">
+
+{{each(i,v) list}}
+	<div class="currentPeriod winner">
+
+	  <ol>
+	 
+	 
+	 
+	     <li><span>${v.activityName} / 冠军 : </span><i class="displayPart">${v.activityList[0]}</i></li>
+	  	
+	 	<li><span>亚军 : </span><i class="displayPart">${v.activityList[1]}</i></li>
+	  
+	 	<li><span>季军 : </span><i class="displayPart">${v.activityList[2]}</i></li>
+	  </ol>
+
+	 <ul>
+	  
+	 	<li>第四名：<i class="displayPart">${v.activityList[3]}</i></li>
+	 
+	 	<li>第五名：<i class="displayPart">${v.activityList[4]}</i></li>
+	
+	 	<li>第六名：<i class="displayPart">${v.activityList[5]}</i></li>
+		
+	 	<li>第七名：<i class="displayPart">${v.activityList[6]}</i></li>
+	
+	 	<li>第八名：<i class="displayPart">${v.activityList[7]}</i></li>
+	
+	 	<li>第九名：<i class="displayPart">${v.activityList[8]}</i></li>
+	 
+		<li>第十名：<i class="displayPart">${v.activityList[9]}</i></li>
+	 </ul>
+	
+	 
+   
+
+	</div>
+{{/each}}	
+</script>
+<!-- // {{each(j,g) v.activityList}} -->

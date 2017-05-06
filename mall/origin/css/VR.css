@@ -1,0 +1,122 @@
+
+
+/**
+ * 2016-04-29
+ * VR 
+ * simba
+ */
+#container{
+	font-family: 'lantinghei';
+}
+
+h1,h2,h3{margin: 0;padding: 0;}
+
+.vr-tit,.vr-txt,.vr-game-tit,.vr-game-txt{
+	color: #333;
+	text-align: center;
+}
+.vr-tit{
+	margin-top: 56px;
+	font-size: 40px;
+	font-weight: 100;
+}
+.vr-tit span{
+	font-size: 30px;
+}
+@media only screen and (max-width: 1680px){
+	.vr-tit{
+		margin-top: 40px;
+		font-size: 36px;
+	}
+	.vr-tit span{
+		font-size: 24px;
+	}
+}
+.vr-txt{
+	margin-top: 35px;
+	font-size: 18px;
+	font-weight: 100;
+	line-height: 28px;
+}
+.vr-img{
+	margin-top: 70px;
+	text-align: center;
+}
+.vr-img img{
+	position: relative;
+	left: -18px;
+}
+
+.vr-game-tit{
+	margin-top: 140px;
+	font-size: 30px;
+	font-weight: 100;
+}
+.vr-game-txt{
+	margin-top: 20px;
+	font-size: 18px;
+	font-weight: 100;
+	line-height: 26px;
+}
+
+
+.vr-game-con{
+	margin-top: 55px;
+}
+.vr-game-con .vr-game-top,
+.vr-game-con .vr-game-bottom{
+	position: relative;
+	float: left;
+	height: 469px;
+	background-color: #4a4a4a;
+	overflow: hidden;
+}
+.vr-game-con img{
+    -moz-transition: transform 5s ease-out;
+    -webkit-transition: transform 5s ease-out;
+    -o-transition: transform 5s ease-out;
+    transition: transform 5s ease-out;
+}
+.vr-game-con .vr-game-top{
+	width: 50%;
+}
+.vr-game-con .vr-game-bottom{
+	width: 100%;
+	/*background: url(../img/fuze/vr-game-3.png) no-repeat scroll center center #4a4a4a;*/
+}
+
+/*.vr-game-top-left{
+	background: url(../img/fuze/vr-game-1.png) no-repeat scroll center center #4a4a4a;
+}
+.vr-game-top-right{
+	background: url(../img/fuze/vr-game-2.png) no-repeat scroll center center #4a4a4a;
+}*/
+
+.vr-game-position{
+	padding: 0 52px;
+	position: absolute;
+	bottom: 34px;
+	width: 511px;
+}
+
+.vr-game-top-left .vr-game-position{
+	right: 0;
+}
+.vr-game-top-right .vr-game-position{
+	left: 0;
+}
+.vr-game-bottom .vr-game-position{
+	left: 50%;
+	margin-left: -615px;
+	width: 1126px;
+}
+.vr-game-con .vr-game-con-tit{
+	font-size: 30px;
+	color: #fff;
+}
+.vr-game-con .vr-game-con-txt{
+	margin-top: 20px;
+	line-height: 26px;
+	font-size: 14px;
+	color: #fff;
+}

@@ -1,0 +1,177 @@
+<div class="progress_top">
+	<!--<span class="_font">购物车</span>
+	<label><img src="img/step1.png"></label>-->
+	<img src="img/cart-step2.png" alt="">
+</div>
+<div class="centered bg_c_w cereateOrder_box">
+	<div class="mall_table">
+		<dl class="mall_tabdl" id="_zjpj">
+			<!-- 主机/配件 -->
+		</dl>
+
+		<dl class="mall_tabdl" id="_yxdj">
+			<!-- 游戏/道具 -->
+		</dl>
+	</div>	
+
+	<div class="sum_cart">
+		<div class="cart-sum-detail">
+			<p class="cart-sum-tit">
+				<span class="cart-sum-head">运费</span>
+				<span class="cart-sum-val orange"><font >&yen;</font><font class="fs-20 cart-freight"></font></span>
+			</p>
+			<p class="cart-sum-tit">
+				<span class="cart-sum-head">合计费用</span>
+				<span class="cart-sum-val orange"><font>&yen;</font><font class="fs-20 cart-total-cost"></font></span>
+			</p>
+			<p class="cart-sum-tit">
+				<span class="cart-sum-head">寄送至</span>
+				<span class="cart-sum-val cart-total-address"></span>
+			</p>
+			<p class="cart-sum-tit mbNone">
+				<span class="cart-sum-head">收货人</span>
+				<span class="cart-sum-val cart-total-name"></span>
+			</p>
+		</div>
+		<div class="cart-btn-box">
+			<a href="#cart" class="goto_cart"><img src="img/cart-back.png">返回购物车</a>
+			<a href="javascript:;" class="btn cartBuy btn_200x40">确认订单</a>
+		</div>
+	</div>
+</div>
+
+
+<!-- 地址模版 -->
+<script id="addressTemplate" type="text/x-jquery-tmpl">
+	{{each list}}
+		<li class="{{if address_default == 1}}show{{/if}}" id="cart-address-${id}">
+			<span class="cart-address-tit {{if address_default == 1}}active{{/if}}" data-id="${id}">${address_name}</span>
+			<span class="cart-address-detail">
+				<font class="cad-name">${address_name}</font>
+				<font class="cad-detail">${address_province} ${address_city} ${address_region} ${address_detail}</font>
+				<font class="cad-tel">${address_phone}</font>
+			</span>
+			<span class="cart-address-default {{if address_default != 1}}hidden{{/if}}">默认地址</span>
+			<span class="cart-address-operation cart-address-del" data-id="${id}"></span>
+			<span class="cart-address-operation cart-address-edit" data-id="${id}" data-index="${$index}">编辑</span>
+			<span class="cart-address-operation cart-address-set {{if address_default == 1}}hidden{{/if}}" data-id="${id}" data-index="${$index}">设为默认地址</span>
+		</li>
+	{{/each}}
+</script>
+
+
+
+<script id="summaryTemplate" type="text/x-jquery-tmpl">
+	<div>应付总额（已免运费）：<span class="rmb">￥</span><span class="s_price">${su_price.toFixed(2)}</span></div>
+	<div class="btn btn_180x40 yellow">提交订单</div>
+</script>
+
+<!--收货人信息  模板-->
+<script id="zjpjTemplate" type="text/x-jquery-tmpl">
+
+	<div class="cart-consignee">
+		<p class="cart-head address_btn">
+			<span>收货人信息</span>
+			<a class="cart-add-address" href="javascript:">添加地址</a>
+		</p>
+		<div class="cart-address">
+			<ul class="cart-address-list tab_trueaddress">
+
+			</ul>
+			<div class="cart-address-more">
+				<a href="javascript:" cart-data="down">更多地址	&or;</a>
+			</div>
+			<div class="cart-address-no">
+				还没有收货地址哦！赶紧添加收货地址吧~
+			</div>
+		</div>
+	</div>
+	<dt>
+		<p class="cart-head">
+			<span>主机/配件</span>
+			<a class="cart-add-bill" href="javascript:">修改发票信息</a>
+			<span class="cart-bill-detail" invoice-type="0">（无）</span>
+		</p>
+		<div class="tab_title orderTitle">
+			<div class="tab_name">商品名称</div>
+			<div class="tab_price">销售价格</div>
+			<div class="tab_number">数量</div>
+			<div class="tab_count">小计</div>
+		</div>
+	</dt>
+	<dd id="createOrder_dd">
+		<div class="tab_listcontai">
+			{{each list}}
+				<div class="tab_con">
+					<div class="tab_picname">
+						<a href="#item/${flag}"><img src="${thumb}"/></a>
+						<p>${title}</p>
+						<label>
+						<span>${flag_name}</span>
+						</label>
+					</div>
+					<div class="tab_price lh108">${price}</div>
+					<div class="tab_number lh108">${num}</div>
+					<div class="tab_count lh108 color_orange">${(num*price).toFixed(2)}</div>
+				</div>
+			{{/each}}
+		</div>
+	</dd>
+</script>
+
+<!--游戏道具  模板-->
+<script id="yxdjTemplate" type="text/x-jquery-tmpl">
+	<dt>
+		<p class="cart-head">
+			<span>游戏/道具</span>
+		</p>
+		<div class="tab_title">
+			<div class="tab_name">商品名称</div>
+			<div class="tab_price">销售价格</div>
+			<div class="tab_number">角色</div>
+			<div class="tab_count">小计</div>
+		</div>
+	</dt>
+	<dd>
+		<div class="tab_listcontai">
+			{{each list}}
+				<div class="tab_con">
+					<div class="tab_picname">
+						<a href="#gameItem/${flag}"><img src="${thumb}"/></a>
+						<p>${title}</p>
+						<label>
+						<span>${flag_name}</span>
+						</label>
+					</div>
+					<div class="tab_price lh108">${price}</div>
+					<div class="tab_number lh108 fontGreen">${f_name}</div>
+					<div class="tab_count lh108">${price}</div>
+				</div>
+			{{/each}}
+		</div>
+	</dd>
+</script>
+
+<!--发票  模板-->
+<script id="billTemplate" type="text/x-jquery-tmpl">
+	<div class="order_fapiao">
+		<div class="fp_type order_fp_top">
+			<span>发票类型：</span>
+			<label><input name="danwei" type="radio" data-type=1 value="个人" checked />个人</label>
+			<label><input name="danwei" type="radio" data-type=2 value="单位" />单位</label>
+		</div>
+		<div class="order_inptext">
+			<input placeholder="请填写单位抬头" class="order_textbox" type="text"/>
+			<span class="bill-error">请填写单位抬头</span>
+		</div>
+		<div class="cate_type order_fp_top">
+			<span>发票内容：</span>
+			<label><input name="geren" type="radio" data-type=4 value="无需发票" checked />无需发票</label>
+			<label><input name="geren" type="radio" data-type=1 value="明细"  />明细</label>
+		</div>
+		<div class="order-save">
+			<a href="javascript:" class="btn green btn_108x40">保存</a>
+			<span>（<font style="color: red;">*</font> 如需开具增值税发票，请致电客服：400-646-1616）</span>
+		</div>
+	</div>
+</script>

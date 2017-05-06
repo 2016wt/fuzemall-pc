@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>FUZE商城</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Pragma" content="no-cache"> 
+	<meta http-equiv="Cache-Control" content="no-cache"> 
+	<meta http-equiv="Expires" content="0"> 
+	<meta name="keywords" content="FUZE,战斧F1,FUZE游戏机,战斧主机,蓝港科技。">
+	<meta name="description" content="FUZE游戏机是由蓝港科技推出的家庭互联网娱乐游戏机，通过技术创新、优质的本地化运营和推陈出新的游戏内容，力争为玩家提供一流的主机级游戏体验。
+">
+
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/design.css" />
+	<!--[if IE 8.0]><link href="css/hack/fuze_designie8.css?v=2015sd" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 9.0]><link href="css/hack/fuze_designie8.css?v=2015sd" rel="stylesheet" type="text/css" /><![endif]-->
+	<link rel="stylesheet" href="http://cdn.fuzeuser.com/plugins/fullpage/jquery.fullpage.css" />
+</head>
+<body>
+	<div id="pagebox">
+		<div class="fuzeTop_navbox" style="top:0" id="topnav">
+			<dl class="auto_width fuzeTop_nav">
+				<dt>
+					<label>战斧 F1	</label>
+					<p>
+						<a href="index.html#fuze">概述</a>|
+						<a href="index.html#design" class="active">主机</a>|
+						<a href="index.html#hansle">手柄</a>|
+						<a href="index.html#conFigure">配置表</a>
+					</p>
+				</dt>
+				<dd>
+					<a href="index.html#item/f1" class="blue_btn btn_96x32">立即抢购</a>
+				</dd>
+			</dl>
+		</div>
+		<div id="fullpage">
+			<!-- 如果云知道 -->
+		</div>
+	</div>
+	<div id="global_pop">
+		<div class="pop_box">
+			<div class="pop_close">
+			</div>
+			<div class="pop_content">
+			</div>
+		</div>
+	</div>
+	<script src="js/lib/require.js"></script>
+	<script src="js/lib/jquery-1.11.2.min.js"></script>
+	<script src="js/lib/jquery.tmpl.min.js"></script>
+	<script src="js/common/config.js"></script>
+	<script src="js/lib/html5media.min.js"></script>
+
+	<script type="text/javascript">
+		var _min = "";
+	</script>
+
+	<script src="js/common.min.js?v=1.0.4"></script>
+
+	<script src="http://www.sobot.com/chat/pc/pc.min.js?sysNum=3b4362eb8cc149488e0853aa6f37fc07" id="zhichiload" ></script>
+	<script type="text/javascript">
+		if(Debug){
+			$("body").on("click",".login",function(){
+			    $.alertLoginPop();
+			    return false; //debug登录
+			});
+		}else{
+			_min = ".min.js?v="+$.getVersion();
+			$("body").on("click",".login",function(){
+			   window.location.href = Links.login + "?redirect="+encodeURIComponent(location.href)+"&broker=fuzemall&l=zh-cn";
+			});
+		}
+	</script>
+	<!--[if IE 8.0]>
+	<script>
+	window.onscroll = function function_name () {
+		var doc = document.documentElement, body = document.body;
+	    var top = doc.scrollTop?doc.scrollTop:body.scrollTop;
+	    if(top >= 80){
+	        $("#topnav").addClass("fixed_nav");
+	    }else{
+	    	$("#topnav").removeClass("fixed_nav");
+	    }
+	}
+	</script>
+	<![endif]-->
+	
+	<!--[if IE 9.0]>
+	<script>
+	window.onscroll = function function_name () {
+		var doc = document.documentElement, body = document.body;
+	    var top = doc.scrollTop?doc.scrollTop:body.scrollTop;
+	    if(top >= 80){
+	        $("#topnav").addClass("fixed_nav");
+	    }else{
+	    	$("#topnav").removeClass("fixed_nav");
+	    }
+	}
+	</script>
+	<![endif]-->
+	
+	<script>
+		require(["js/controller/designController"+_min],function(_call){
+			_call && _call();
+		});
+	</script>
+	
+	<script type="text/javascript">
+		var iWidth=document.documentElement.clientWidth;
+			document.getElementsByTagName("html")[0].style.fontSize=iWidth/10+"px";
+		$(window).resize(function(){
+			var iWidth=document.documentElement.clientWidth;
+			document.getElementsByTagName("html")[0].style.fontSize=iWidth/10+"px";
+		});
+		
+	</script>
+	<script id="loginPopTemplate" type="text/x-jquery-tmpl">
+		<div class="login_pop">
+			<div class="login_o">
+				<label>用户名：</label>
+				<input type="text" value="" id="login_name" autofocus="autofocus">
+				<div class="errmsg" id="600000">用户名不存在</div>
+			</div>
+			<div class="login_o">
+				<label>密码：</label>
+				<input type="password" value="" id="login_psw">
+				<div class="errmsg" id="600100">密码错误</div>
+			</div>
+			<div class="login_o">
+				<label>验证码：</label>
+				<input type="text" value="" class="login_code" id="login_code">
+				<img src="/front.php?s=/Home/User/imageVerify&type=1" class="img_verify">
+				<div class="errmsg" id="500002">验证码错误</div>
+			</div>
+			<div class="login_o">
+				<div class="btn enterflag" id="login_btn">登录</div>
+				<div class="btn m_r_0" id="rgster_btn">注册</div>
+			</div>
+			<div class="login_o forgot_psw">
+				<a>忘记密码？</a>
+			</div>
+		</div>
+	</script>
+	<!-- cnzz统计 -->
+	<div style="display:none">
+		<script src="http://s4.cnzz.com/z_stat.php?id=1259045421&web_id=1259045421" language="JavaScript"></script>
+	</div>
+</body>
+</html>

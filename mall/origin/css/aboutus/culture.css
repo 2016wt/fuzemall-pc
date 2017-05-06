@@ -1,0 +1,30 @@
+
+
+.culture-list{
+	margin-bottom: 30px;
+}
+.culture-list li{
+	float: left;
+	width: 50%;
+	height: 300px;
+	text-align: center;
+	overflow: hidden;
+}
+.culture-list .culture-icon{
+	margin-top: 50px;
+	font-size: 0;
+}
+.culture-list .culture-tit{
+	margin-top: 20px;
+	font-size: 18px;
+	font-weight: 100;
+	color: #333;
+	line-height: 20px;
+}
+.culture-list .culture-txt{
+	margin-top: 5px;
+	font-size: 14px;
+	font-weight: 100;
+	color: #666;
+	line-height: 20px;
+}

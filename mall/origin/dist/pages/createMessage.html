@@ -1,0 +1,66 @@
+
+<!-- 放在内容里面防止页面后台样式覆盖 -->
+<style type="text/css">
+	body{ background-color: #fff; }
+</style>
+
+<!-- h1 -->
+<h1 class="cm-head">
+	<p>官方资讯</p>
+</h1>
+
+<!-- 填写问题 -->
+<div class="cm-con">
+	<h2 class="cm-tit">填写问题</h2>
+	<!-- 提问表单 -->
+	<form>
+		<div class="cm-form">
+			<ul class="cm-form-list">
+				<li class="clearfix">
+					<span>选择问题类型：</span>
+					<select class="cm-select" name="" id="issueTypeList" value=""></select>
+					<!-- 问题类型模板 -->
+					<script id="issueTypeTem" type="text/x-jquery-tmpl">
+						{{each list}}
+							<option value="${type_id}">${type_name}</option>
+						{{/each}}
+					</script>
+				</li>
+				<li class="clearfix">
+					<span>您遇到问题的时间：</span>
+					<input type="text" id="issueCreateTime"></input>
+				</li>
+				<li class="clearfix">
+					<span>您的联系方式：</span>
+					<input type="text" id="issueContact"></input>
+					<span class="cm-note">建议您填写手机/邮箱方便工作人员和您联系</span>
+				</li>
+				<li class="clearfix">
+					<span>请详细描述您遇到的问题：</span>
+					<div class="cm-textBox">
+						<textarea id="issueTitle" placeholder=""></textarea>
+					</div>
+				</li>
+				<li class="clearfix">
+					<span class="cm-imgSpan">上传问题图片：</span>
+					<div class="cm-imgBox">
+						<!-- 图片容器 -->
+						<div class="cm-img-con" id="fileList"></div>
+						<a class="cm-img-btn clearfix" id="filePicker" href="javascript:"><img src="img/cm-img.png" alt=""></a>
+					</div>
+					<span class="cm-note cm-imgSpan">最多支持5张上传</span>
+				</li>
+				<li>
+					<a class="btn cm-btn green" id="submitMyIssue" href="javascript:">提交问题</a>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>
+
+<!-- <script type="text/javascript" src="../plugins/datetimepicker/jquery.datetimepicker.js"></script>
+<script type="text/javascript">
+	$("#issueCreateTime").datetimepicker();
+</script> -->
+
+

@@ -1,0 +1,80 @@
+
+<!-- 防止样式覆盖 -->
+<style type="text/css">
+	body{
+		background-color: #fff;
+	}
+</style>
+
+<!-- game banner -->
+<div class="game-banner">
+	<!-- <video id="gameVideo" width="100%" src="http://cdntest.fuzeuser.com/fuzemall/product/video/product.mp4?wsiphost=local" preload loop autoplay></video> -->
+	
+	<!-- banner pic -->
+	<ul class="game-banner-list">
+		<li><img src="http://cdn.fuzeuser.com/fuzemall/game/lb/game-banner-1.jpg"></li>
+		<li><img src="http://cdn.fuzeuser.com/fuzemall/game/lb/game-banner-2.jpg"></li>
+		<li><img src="http://cdn.fuzeuser.com/fuzemall/game/lb/game-banner-3.jpg"></li>
+		<li><img src="http://cdn.fuzeuser.com/fuzemall/game/lb/game-banner-4.jpg"></li>
+	</ul>
+	<!-- banner tip -->
+	<ul class="game-banner-tip-list"></ul>
+</div>
+
+<!-- game txt -->
+<p class="game-txt">
+	超过200家合作伙伴，包括光荣特库摩（Koei Tecmo）、育碧（Ubisoft）、Deep Sliver等国际知名游戏开发商，</br>Rimlight、Comcept等独立游戏工作室，万岁游戏、柳叶刀科技、美格方互动等优秀国内主机游戏制作团队。</br>
+	每款登陆FUZE平台的游戏作品都经过甄选，并获得官方正版授权。</br>
+</p>
+
+<!-- game recommended -->
+<div class="game-recommended">
+	<div class="game-slider">
+		<!-- game list -->
+		<div class="game-list js_slider JS_gameItem" id="gameRecommend">
+			<!-- 数据渲染 -->
+		</div>
+		<!-- game tips -->
+		<ul class="game-tips js_slider_tips"></ul>
+		<!-- game handle -->
+		<a class="game-handle game-handle-left js_slider_handle" href="javascript:"></a>
+		<a class="game-handle game-handle-right js_slider_handle" href="javascript:"></a>
+	</div>
+</div>
+
+<!-- game starting -->
+<div class="game-starting">
+	<h1>首发游戏阵容</h1>
+	<div class="game-starting-box">
+		<ul class="game-starting-list clearfix JS_gameItem" id="gameStarting">
+			<!-- 数据渲染 -->
+		</ul>
+	</div>
+</div>
+
+<!-- game more -->
+<div class="game-more">
+	<a id="gameMore" href="javascript:">查看FUZE游戏机全部游戏</a>
+</div>
+
+<!-- 3A游戏模板 -->
+<script id="gameRecommendTem" type="text/x-jquery-tmpl">
+	{{each list}}
+		<a class="mrNone" id="${gid}" href="javascript:">
+			<img src="${resUrl}">
+			<p>${title}</p>	
+		</a>
+	{{/each}}
+</script>
+
+<!-- 首发游戏模板 -->
+<script id="gameStartingTem" type="text/x-jquery-tmpl">
+	{{each data.list}}
+		<li>
+			<a id="${gid}" href="javascript:">
+				<img src="${resUrl}">
+				<p>${title}</p>
+			</a>
+		</li>
+	{{/each}}
+</script>

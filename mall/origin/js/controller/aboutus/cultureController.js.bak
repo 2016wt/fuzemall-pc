@@ -1,0 +1,7 @@
+define(function(){
+	return function(templateUrl,param){
+		$("#center_right").loadPage(templateUrl,["mall/css/aboutus/culture.css"],function(){
+			
+		});
+	}
+});

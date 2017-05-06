@@ -1,0 +1,111 @@
+	<!-- 防止样式覆盖 -->
+		<style type="text/css">
+			body{
+				background-color: #fff;
+			}
+		</style>
+
+
+<!-- game banner -->
+<div class="game-banner">
+	<!-- <video id="gameVideo" width="100%" src="http://cdntest.fuzeuser.com/fuzemall/product/video/product.mp4?wsiphost=local" preload loop autoplay></video> -->
+	
+	<!-- banner pic -->
+	<ul class="game-banner-list">
+	<li>
+			<img src="${banner_pic}" alt="">
+			
+		</li>
+	</ul>
+	<!-- banner tip -->
+	<ul class="game-banner-tip-list"></ul>
+</div>
+
+<!-- game txt -->
+<p class="game-txt">
+	超过200家合作伙伴，包括光荣特库摩（Koei Tecmo）、育碧（Ubisoft）、Deep Sliver等国际知名游戏开发商，</br>Rimlight、Comcept等独立游戏工作室，万岁游戏、柳叶刀科技、美格方互动等优秀国内主机游戏制作团队。</br>
+	每款登陆FUZE平台的游戏作品都经过甄选，并获得官方正版授权。</br>
+</p>
+
+<!-- game recommended -->
+<div class="game-groups" style="display:none">
+	<div class="game-kind">
+		<span class="kind">游戏分类</span>
+		<ul class="kindul">
+			
+		</ul>
+		<span class="xiala"><img src="../img/fuze/xiala.png" alt=""></span>
+	</div>
+	<div class="search">
+		<input type="text" class="txt" placeholder="请输入关键词搜索">
+		<button></button>
+	</div>
+</div>
+<div class="game-content">
+	<div class="keyword_list clearfix">
+		<div class="keyword"><span></span><a href="javascript:;"></a></div>
+	</div>
+	<div class="game-list">
+		<!--游戏列表-->
+		
+	</div>
+	
+	
+	<div class="gamelist_loading"></div>
+	<a href="javascript:;" class="look_all" data-page="1" style="display:none">查看更多游戏</a>
+</div>
+<script>
+	var flag=true;
+	$('.game-kind').on('click','.xiala',function(){
+		
+		if(flag){
+			$('.kindul').css({'height':'auto'});
+			$('.game-groups').css({'padding-bottom':'43px'});
+			$(this).find('img').attr('src','../img/fuze/sq.png');
+			flag=false;
+			
+		}else{
+			$('.kindul').css({'height':'41px'});
+			$('.game-groups').css({'padding-bottom':'41px'});
+			$(this).find('img').attr('src','../img/fuze/xiala.png');
+			flag=true;
+
+		}
+		
+	})
+
+
+</script>
+
+<!-- 轮播图模板 -->
+<script id="game-banner-tem" type="text/x-jquery-tmpl">
+	 <a href="${banner_url}">
+		<li>
+			<img src="${banner_pic}" alt="">
+			
+		</li>
+     </a>
+
+</script>
+<!-- 游戏分类 -->
+<script  id="gameCate" type="text/x-jquery-tmpl">
+	<li><a href="javascript:;" id="0" class="hover_bg">全部</a></li>
+	{{each list}}
+		<li>
+			<a href="javascript:;" id="${id}">${name}</a>
+		</li>
+	{{/each}}
+
+</script>
+<script  id="gameList" type="text/x-jquery-tmpl">
+	{{each list}}
+	
+	<div class="game-intro"  id="${gid}" >
+		<img  id="${gid}" src="${resUrl}&op=imageView2&mode=3&width=250&height=250" alt="">
+		<h1>${title}</h1>
+		<p class="displayPart">${desc}</p>
+	
+	</div>
+	{{/each}}
+</script>
+ <!-- style="background-image: url(${banner_pic})" -->

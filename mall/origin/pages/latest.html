@@ -1,0 +1,53 @@
+<style type="text/css">
+	#container{
+		margin-bottom: 0px;
+	}
+	#footer{
+		margin-top: 0px;
+	}
+</style>
+<div class="fgter_title m_b_0" style="background-color: #f5f5f5;color: #000;">
+	<p class="centered"><span  data-subpage="welcome">官方资讯</span></p>
+</div>
+<div class="latest_wrap">
+	<div class="latest_contai centered clearfix">
+		<div class="latest_left">
+								
+		</div>
+
+		<div class="latest_rig">
+			<p><img src="img/Weibo.png"><span>关注蓝港科技官方微博</span></p>
+			<p><img src="img/weiboerweima.jpg"><span>关注蓝港科技官方微信</span></p>
+		</div>
+	</div>
+</div>
+<div id="Pagination"></div>
+<script id="lastet_list" type="text/x-jquery-tmpl">
+	<p class="latest_tit">${data.title}</p>
+	<div class="latest_break clearfix">
+		<label>
+			<span class="latest_time">${data.add_time}</span>
+			<font>|</font>
+			<span class="latest_ti">${data.author}</span>
+			<font>|</font>
+			<span class="latest_gs">蓝港科技</span>
+		</label>
+		<a href="#newMation" class="latest_return">返回列表</a>
+	</div>
+	<div class="latest_font">
+		{{html data.content}}
+	</div>
+	<div class="latest_bot">
+	{{if data.next != null}}
+		<label>上一篇：<a href="javascript:;" data-crctid="${data.next.article_id}">${data.next.title}</a></label>
+		{{else}}
+		<label>没有上一篇了</label>
+	{{/if}}
+	{{if data.pre != null}}
+		<p>下一篇：<a href="javascript:;" data-crctid="${data.pre.article_id}">${data.pre.title}</a></p>
+		{{else}}
+		<p>没有下一篇了</p>
+	{{/if}}
+		
+	</div>
+</script>

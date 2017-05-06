@@ -1,0 +1,130 @@
+.latest_contai {
+	/*padding-top: 50px;*/
+}
+.latest_left {
+	float: left;
+	width: 826px;
+	background: #fff;
+	padding:20px;
+}
+.latest_tit {
+	font-size: 24px;
+	color: #29485f;
+}
+.latest_wrap{
+	background-color: #fff;
+}
+.latest_break  {
+	border-bottom: 1px solid #dcdcdc;
+	padding:20px 0 10px 0;
+}
+.latest_break label {
+	float: left;
+}
+.latest_break label span, .latest_break label font {
+	display: inline-block;
+	font-size: 12px;
+	color: #a6a7a8;
+	margin-right: 15px;
+}
+.latest_break label span, .latest_break a {
+	padding-left: 25px;
+	background: url(../img/mallicon.png) no-repeat;
+}
+.latest_break label .latest_time {
+	background-position: -10px -1px;
+}
+.latest_break label .latest_ti {
+	background-position: -8px -29px;
+}
+.latest_break label .latest_gs {
+	background-position: -9px -55px;
+}
+.latest_break  a {
+	float: right;
+	background-position: -10px -80px;
+	color: #5e839e;
+	font-size: 12px;
+}
+.latest_font {
+	display: block;
+	padding:20px 0 45px 0;
+	overflow: hidden;
+	border-bottom: 1px solid #dcdcdc;
+}
+.latest_font p {
+	color: #5e839e;
+	font-size: 14px;
+	display: block;
+	line-height: 24px;
+}
+.latest_bot {
+	line-height: 55px;
+	font-size: 14px;
+	color: #5e839e;
+	overflow: hidden;
+}
+.latest_bot label {
+	float: left;
+}
+.latest_bot a:hover {
+	color: #1eb7c5;
+}
+.latest_bot p {
+	float: right;
+}
+.latest_bot a {
+	color: #5e839e;
+}
+/*.latest_rig {
+	float: right;
+	width: 260px;
+}
+.latest_rig p {
+	background: #fff;
+	text-align: center;
+	padding:25px 0 15px 0;
+	margin-bottom: 30px;
+}*/
+.latest_rig {
+	float: right;
+    width: 260px;
+    padding-top:25px;
+}
+
+.latest_rig p:nth-of-type(1) {
+	width:145px;
+	height:151px;
+	border:1px solid #ccc;
+	margin:0 auto;
+	padding:5px;
+	text-align:center;
+	margin-bottom:85px;
+}
+.latest_rig p:nth-of-type(1) img{
+	width:100%;
+	height:100%;
+}
+.latest_rig p:nth-of-type(1) span{
+	line-height:34px;
+	color:#6d6d6d;
+	
+}
+
+.latest_rig p:nth-of-type(2) {
+	width:160px;
+	height:156px;
+	border:1px solid #ccc;
+	
+	margin:0 auto;
+	text-align:center;
+}
+.latest_rig p:nth-of-type(2) img{
+	width:100%;
+	height:100%;
+}
+.latest_rig p:nth-of-type(2) span{
+	line-height:20px;
+	color:#6d6d6d;
+	
+}

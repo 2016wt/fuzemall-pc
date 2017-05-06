@@ -1,0 +1,65 @@
+
+/*update*/
+.secti0_img,.section0_tit,.section0_tit2,.handle_red,.handle_gold,.handle_gray,.handle_white,.set1_botp,.se1_font,.fuze_handimg{
+  transition: all 1000ms ease;
+  opacity: 0;
+}
+.fuzefull_black{
+  transition: all 1000ms ease;
+}
+.section0_tit{
+  transform: translate3d(0px, -120px, 0px);
+}
+.section0_tit2{
+  transform: translate3d(0px, -80px, 0px);
+}
+.secti0_img{
+  transform: translate3d(0px, 120px, 0px);
+}
+.handle_red{
+  transform: translate3d(0px, -100%, 0px);
+}
+.handle_gold{
+  transform: translate3d(0px, -120%, 0px);
+}
+.handle_gray{
+  transform: translate3d(0px, -180%, 0px);
+}
+.handle_white{
+  transform: translate3d(0px, -200%, 0px);
+}
+.set1_botp,.se1_font{
+  transform : scale(0.4,0.4);
+}
+.fuze_handimg{
+  transform: translate3d(0px, 100%, 0px);
+}
+
+.fuzefull_black{
+  transform: rotateY(-90deg);
+}
+
+
+/*active*/ 
+.section0_tit.active,
+.section0_tit2.active,
+.secti0_img.active,
+.handle_red.active,
+.handle_gold.active,
+.handle_gray.active,
+.handle_white.active,
+.fuze_handimg.active{
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.set1_botp.active,
+.se1_font.active{
+  transform : scale(1,1);
+  opacity: 1;
+}
+
+.fuzefull_black.active{
+  transform: rotateY(0deg);
+}
+

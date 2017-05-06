@@ -1,0 +1,575 @@
+div#save_addr {
+  margin-top: 20px;
+}
+
+.o_title{
+	height: 30px;
+	line-height: 30px;
+	background-color: #eff1f2;
+	color: #21292f;
+	font-size: 0px;
+}
+
+.order_success{
+	padding-left: 15px;
+	color: #2ea9f7;
+	width: 460px;
+	margin: 0 auto;
+}
+
+.s_info_wrap{
+	display: inline-block;
+	width: 395px
+}
+
+.order_success img{
+	vertical-align: top;
+}
+
+.order_success .warn{
+	font-size: 12px;
+	color: #8f9ea8;
+	display: inline-block;
+	padding-left: 20px;
+	padding-top: 30px;
+}
+
+.order_success .success{
+	font-size: 20px;
+	color: #28485f;
+	display: inline-block;
+	padding-left: 20px;
+	line-height: 30px;
+}
+
+.remin{
+	float: right;
+	font-size: 24px;
+	font-weight: bold;
+	padding-right: 15px;
+}
+
+.remin .text{
+	color: #000;
+}
+
+.remin .time{
+	color: #2ea9f7;
+}
+
+.order_info{
+	margin-top: 30px;
+	padding: 0 140px;
+}
+
+.order_info .text{
+	color: #28485f;
+	font-size: 14px;
+	line-height: 50px;
+}
+
+.alipay{
+	position: relative;
+	height: 100px;
+}
+
+.alipay .btn{
+	position: absolute;
+	right: 140px;
+}
+
+.region_o label{
+	width: 80px;
+	text-align: left;
+	display: inline-block;
+	font-size: 12px;
+	color: #5e839e;
+}
+.region_city .errmsg,.region_detail .errmsg {
+	margin-left: 86px;
+}
+.region_o label span {
+	color: red;
+}
+.region_o{
+	margin:0 0 15px 0;
+}
+.region_default {
+	display: block;
+	padding:0 0 0 85px;
+}
+.region_default p {
+	display: inline-block;
+	overflow: hidden;
+	font-size: 12px;
+	color: #5e839e;
+	line-height: 18px;
+	cursor: pointer;
+}
+.region_default p span {
+	display: block;
+	float: left;
+	border:1px solid #1ab4c2;
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+	background: #fff;
+}
+.region_default p.active span{
+	background: url(../img/gouicon.png) center center no-repeat #1ab4c2;
+}
+#address_name, #address_phone {
+	width: 224px;
+}
+
+.region_sub{
+	display: inline-block;
+}
+
+#addr_option{
+	width: 930px;
+}
+
+.addr_option{
+	cursor: pointer;
+	width: 280px;
+	height: 140px;
+	display: inline-block;
+	border: 1px solid #c9deea;
+	box-sizing: border-box;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	vertical-align: middle;
+	position: relative;
+}
+
+.addr_option.active{
+	background-image: url("../img/yxj.png");
+	background-repeat: no-repeat;
+	border: 1px solid #23aeb3;
+	background-position: 265px 125px;
+}
+
+.addr_option.active .addr_title{
+	border-bottom: 1px dashed #23aeb3;
+}
+
+.addr_option span{
+	vertical-align: middle;
+}
+
+.addr_option:hover .addr_action{
+	display: inline-block;
+}
+
+.addr_action{
+	float: right;
+	color: #005ea7;
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+	font-size: 12px;
+}
+
+.addr_action a{
+	cursor: pointer;
+	margin-left: 10px;
+	color: #28485f;
+}
+
+.addr_action a:hover{
+	text-decoration: underline;
+}
+
+#address_detail{
+	width: 380px;
+}
+
+.suborder_wrap{
+	background-color: #fff;
+	padding-left: 45px;
+}
+
+.l_label,.r_value{
+	display: inline-block;
+}
+
+.l_label{
+	width: 100px;
+	vertical-align: top;
+	color: #28485f;
+	font-family: "Microsoft Yahei";
+	font-size: 14px;
+}
+
+.addr_title{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px dashed #c9deea;
+	padding: 0 20px;
+	color: #28485f;
+	font-size: 14px;
+}
+
+.addr_phone{
+	float: right;
+	background-image: url("../img/lumia1.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 18px;
+}
+
+.active .addr_phone{
+	background-image: url("../img/lumia.png");
+}
+
+.addr_cur{
+	padding: 10px 20px;
+	color: #28485f;
+	font-size: 12px;
+	font-family: "宋体";
+	line-height: 20px;
+}
+
+.new_addr{
+	background-image: url("../img/cross.png");
+	background-repeat: no-repeat;
+	background-position: center 30px;
+	color: #8f9ea8;
+}
+
+.tjxdz{
+	font-size: 12px;
+	font-family: "宋体";
+	text-align: center;
+	margin-top: 90px;
+}
+
+.selectBox{
+	width: 240px;
+	height: 60px;
+	border: 1px solid #c9deea;
+	cursor: pointer;
+	color: #28485f;
+	font-size: 14px;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.selectBox.active{
+	background-image: url("../img/yxj.png");
+	background-position: 227px 47px;
+	background-repeat: no-repeat;
+	border: 1px solid #23aeb3;
+}
+
+.pay_option,.send_option,.work_day,.day_offs,.any_time,.pay_wx,.pay_zfb{
+	background-image: url("../img/pc.png");
+	background-repeat: no-repeat;
+	background-position: 20px center;
+	line-height: 60px;
+	line-height: 60px;
+	padding-left: 70px;
+}
+
+.pay_wx{
+	background-image: url("../img/weixin_grey.png");
+	padding-left: 100px;
+}
+
+.active .pay_wx{
+	background-image: url("../img/weixin.png");
+}
+
+.pay_zfb{
+	background-image: url("../img/zhifubao_grey.png");
+	padding-left: 130px;
+}
+
+.active .pay_zfb{
+	background-image: url("../img/zhifubao.png");
+}
+
+.send_option{
+	background-image: url("../img/car.png");
+	background-position: 17px center;
+}
+
+.work_day{
+	background-image: url("../img/work1.png");
+}
+
+.active .work_day{
+	background-image: url("../img/work.png");
+}
+
+.day_offs{
+	background-image: url("../img/coffe1.png");
+}
+
+.active .day_offs{
+	background-image: url("../img/coffe.png");
+}
+
+.any_time{
+	background-image: url("../img/date1.png");
+}
+
+.active .any_time{
+	background-image: url("../img/date.png");
+}
+
+.pay_method{
+	margin-top: 30px;
+}
+
+.send_method,.send_time,.send_invoice{
+	margin-top: 50px;
+}
+
+.send_invoice{
+	cursor: pointer;
+	color: #28485f;
+  	font-size: 14px;
+}
+
+.invoice_radio,.invoice_input{
+	margin-top: 5px;
+	display: none;
+}
+
+.invoice_input input[type="text"]{
+	width: 300px;
+	margin-top: 5px;
+}
+
+.r_value_text{
+	color: #23aeb3;
+	font-size: 12px;
+	font-family: "宋体";
+	padding-top: 5px;
+}
+
+.r_value .o_title .name{
+	width: 280px;
+}
+
+.r_value .o_title .name{
+	padding-left: 70px;
+}
+
+.cart_table .r_value .name img{
+	width: 70px;
+	height: 70px;
+}
+
+.cart_table .r_value ul li{
+	height: 90px;
+}
+
+.submit_order .s_price,.submit_order .rmb{
+	font-size: 40px;
+	color: #ff8400;
+}
+
+.cart_table .r_value .btn{
+	top: 80px;
+}
+
+.pay_amount{
+	height: 60px;
+	background-color: #eff1f2;
+	margin: 20px 140px;
+	text-align: right;
+	padding-right: 10px;
+	line-height: 60px;
+}
+
+.pay_amount .text{
+	font-size: 12px;
+	color: #4d4d4d;
+}
+
+.pay_amount_price{
+	font-size: 40px;
+	padding: 10px;
+	color: #ff8400;
+}
+/*#order_pay {
+	min-height: 400px;
+}*/
+.order_success_ok {
+	margin-bottom: 30px;
+	min-height: 125px;
+	overflow: hidden;
+	position: relative;
+	padding: 30px;
+	background: #fff;
+}
+.success_okicon {
+	background: url(../img/order-ok.png) no-repeat;
+	width: 72px;
+	height: 72px;
+	display: block;
+	position: absolute;
+	left: 66px;
+	top: 54px;
+}
+.order_succ_p {
+	display: block;
+	font-size: 20px;
+	color: #29485f;
+	
+}
+.order_succ_p span {
+	padding-right: 36px;
+	display: inline-block;
+	position: relative;
+}
+.order_succ_p span:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 50%;
+	background: #29485f;
+	width: 1px;
+	height: 19px;
+	display: block;
+	margin-top: -9px;
+}
+.order_succ_p label {
+	padding-left: 36px;
+	display: inline-block;
+}
+.order_succ_p label font {
+	display: inline-block;
+	color: #ff8400;
+	padding:0 0 0 22px;
+}
+.order_succ_bh {
+	padding-top: 22px;
+	font-size: 14px;
+	color: #29485f;
+}
+.order_message {
+	display: block;
+	margin-top: 30px;
+	padding:15px 20px 20px 20px;
+	overflow: hidden;
+}
+.order_msgtit {
+	font-size: 14px;
+	color: #29485f;
+	border-bottom: 1px solid #e6e6e6;
+	display: block;
+	padding-bottom: 15px;
+}
+.order_fp_top {
+	padding-top: 10px;
+	display: block;
+	overflow: hidden;
+}
+.order_fp_top span, .order_fp_top label {
+	display: inline-block;
+	font-size: 12px;
+}
+.order_fp_top span {
+	color: #5e839e;
+	padding-right: 10px;
+}
+.order_fp_top label {
+	margin-right: 30px;
+	margin-bottom: 10px;
+	line-height: 18px;
+	color: #29485f;
+}
+.order_fp_top label input {
+	vertical-align: middle;
+	margin-top: -1px;
+}
+.order_inptext {
+	padding-left: 70px;
+	display: none;
+	overflow: hidden;
+}
+.order_textbox {
+	width: 250px;
+	line-height: 34px;
+	border: 1px solid #e6e6e6;
+	font-size: 12px;
+}
+/*.order_zhifu {
+	padding-top: 65px;
+}*/
+.order_payment, .order_bank {
+	display: block;
+	padding: 30px 0 17px 0;
+	border-bottom: 1px solid #e6e6e6;
+	margin-bottom: 30px;
+}
+.order_bank {
+	padding-top: 0;
+	display: none;
+}
+.order_title  {
+	font-size: 16px;
+	color: #29485f;
+}
+.payment_list, .bank_list {
+	float: left;
+	margin: 20px 40px 0 0;
+	display: block;
+	cursor: pointer;
+}
+.payment_list label, .bank_list label {
+	width: 142px;
+	height: 52px;
+	border: 1px solid #dcdcdc;
+	text-align: center;
+	line-height: 52px;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 3px;
+	margin-left: 20px;
+}
+.payment_list label img, .bank_list label img {
+	display: inline-block;
+	vertical-align: middle;
+	margin:auto;
+}
+.payment_list.active label, .bank_list.active label {
+	box-shadow: 0 0 5px #1db5c3;
+	border-color: #1db5c3;
+}
+.payment_list.active span, .bank_list.active span {
+	background: url(../img/cheackgou.png) center center no-repeat #1ab4c2;
+	border:none;
+	width: 14px;
+	height: 14px;
+}
+.order_okbtn {
+	/*width: 1160px;*/
+	padding: 0 20px 20px 20px;
+	overflow: hidden;
+	text-align: right;
+	margin-right: 0;
+}
+.order_okbtn .btn {
+	display: inline-block;
+}
+.pingtaibi{
+	display: none;
+}
+.order_commodity {
+	margin: 20px 0 0 0;
+	border-top: 1px solid #e6e6e6;
+	padding-top: 20px;
+}
+.order_commodity, .order_getsaddrs {
+	font-size: 14px;
+	color: #29485f;
+	line-height: 24px;
+}
+.zhifu{
+	margin-bottom: 30px;
+}

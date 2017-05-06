@@ -1,0 +1,138 @@
+<div class="center_wrap" id="thh">
+	<dl class="news_contit">
+		<dt>返修/退换货申请</dt>
+	</dl>
+	<div class="thh_content retrun_top">
+		<div class="thh_product">
+			<!-- 货物详情 -->
+		</div>
+		<div class="thh_type">
+			<span class="thh_label return_span">申请类型：</span>
+			<label id="refund_status"><input type="radio" name="radio" data-type=1>退货</label>
+			<label id="exchange_status"><input type="radio" name="radio" data-type=2>换货</label>
+			<label><input type="radio" name="radio" data-type=3>维修</label>
+		</div>
+		<div class="thh_thsl">
+			<div class="thh_label return_span">数　　量：</div>
+			<div class="thh_value">
+				<div class="number">
+					<div class="counter value">
+						<div class="subtract">-</div>
+						<div class="count-value">
+							<input type="text" class="count-input return_count" value="1">
+						</div>
+						<div class="plus">+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="thh_wtms return_wtms">
+			<div class="thh_label return_span">问题描述：</div>
+			<div class="thh_value">
+				<textarea></textarea>
+			</div>
+		</div>
+		<div class="thh_scfj">
+			<div class="thh_label return_span">上传附件：</div>
+			<div class="thh_value">
+				<div id="fileList" class="uploader-list clearfix">
+					<div id="filePicker" class="thh_upimg">
+						
+					</div>
+					<div class="thh_desc">最多上传3张，每张不超过2M，支持JPG、BMP、PNG</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- <table>
+	
+	</table>
+	<div class="thh_form">
+		<div class="thh_fwlx">
+			<div class="thh_label">服务类型：</div>
+			<div class="thh_value">
+				
+			</div>
+		</div>
+		<div class="thh_thsl">
+			<div class="thh_label">数&nbsp;&nbsp;&nbsp;&nbsp;量：</div>
+			<div class="thh_value">
+				<div class="number">
+					<div class="counter value">
+						<div class="subtract">-</div>
+						<div class="count-value">
+							<input type="text" class="count-input" value="1">
+						</div>
+						<div class="plus">+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="thh_wtms">
+			<div class="thh_label">问题描述：</div>
+			<div class="thh_value">
+				<textarea></textarea>
+			</div>
+		</div>
+		<div class="thh_scfj">
+			<div class="thh_label">上传附件：</div>
+			<div class="thh_value">
+				附加有问题的图片，以提高您审核通过的速度(<span style="color:#5e839e;font-size:12px;">最多可以传4张</span>)
+				<div id="fileList" class="uploader-list">
+					<div id="filePicker" class="thh_upimg">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="btn btn_110x38 m_l_75">提交</div>
+</div>
+
+<script id="thqdTemplate" type="text/x-jquery-tmpl">
+	<tr class="thh_header">
+		<th width="50%">商品名称</th>
+		<th width="20%">包装清单</th>
+		<th width="15%">赠送清单</th>
+		<th width="15%">购买数量</th>
+	</tr>
+	<tr class="thh_content">
+		<td>
+			<div class="thh_spmc">
+				<img src="${thumb}">
+				<div class="thh_spmc_text">${title}</div>
+			</div>
+		</td>
+		<td class="thh_bzqd">
+			{{each detailed_list.split("_")}}
+				${$.trim($value)}<br>
+			{{/each}}
+		</td>
+		<td>-</td>
+		<td>${g_num}</td>
+	</tr>
+</script>
+
+<script id="tmpOptionTemplate" type="text/x-jquery-tmpl">
+	{{if refund_status == 1}}<div data-type="1" class="chosebtn">退货</div>{{/if}}
+	{{if exchange_status == 1}}<div data-type="2" class="chosebtn">换货</div>{{/if}}
+	<div data-type="3" class="chosebtn active">维修</div>
+</script>
+
+<script id="prdDetailTemplate" type="text/x-jquery-tmpl">
+	<img src="${thumb}">
+	<div class="thh_product_1">
+		<div class="thh_product_1_t">${title}</div>
+		<div class="thh_product_1_n">数量：<span>${g_num}</span></div>
+	</div>
+	<div class="thh_product_2">
+		<label>商品单价：</label>
+		<span>${price}</span>
+	</div>
+	<div class="thh_product_3">
+		<label>商品总额：</label>
+		<span>${(price*g_num).toFixed(2)}</span>
+	</div>
+</script>

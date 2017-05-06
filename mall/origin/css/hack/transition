@@ -1,0 +1,72 @@
+.fuzeTop_navbox{
+	display: none;
+}
+
+#topnav.fixed_nav{
+	display: block;
+	position: fixed;
+	top: 0 !important;
+}
+#topnav {
+	display: block;
+	position: absolute;
+	top: 80px !important;
+}
+.fuze_full {
+	padding-top: 0;
+}
+.secti0_img {
+	bottom: -27%;
+}
+.section0_tit {
+	font-size: 48px;
+}
+.section0_tit2 {
+	font-size: 18px;
+}
+.section1_bot {
+	bottom: 10%;
+}
+.game_handles img {
+	top: 30%;
+}
+#section8{
+	background: #090909;
+}
+#section9 {
+	background: #000;
+}
+#section5, #section6,#section7 {
+	background: #fff;
+}
+.fuze_handimg{
+	bottom: 0;
+}
+.fuze_handimg img  {
+	bottom: -40%;
+}
+.seti3_tit {
+	font-size: 48px;
+}
+.sect9_tit {
+	font-size: 48px;
+	color: #fff;
+}
+#video img {
+	margin-top: 20%;
+}
+.full_ypic img {
+	top: -2%;
+}
+.section1_bot {
+	bottom: 2% !important;
+}
+.game_handles img {
+	top: 35% !important;
+}
+.sc0_text, .fuzefull_black img {
+	opacity: 1;
+}
+.set_titie .section0_tit, .set_titie .set1_botp, .set_titie .sect2_tit, .set_titie .seti3_tit, .set_titie .sect7_tit, .set_titie .sect9_tit {
+	font-size: 36px !important;
+}

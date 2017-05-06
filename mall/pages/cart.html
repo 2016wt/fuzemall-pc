@@ -1,0 +1,127 @@
+<div class="progress_top">
+	<!--<span class="_font">购物车</span>
+	<label><img src="img/step1.png"></label>-->
+	<img src="img/cart-step1.png" alt="">
+</div>
+<div class="centered bg_c_w m_b_40">
+	<!-- <div class="progress">
+		<img src="img/step1.png">
+	</div> -->
+	<div class="cart_table_wrap">
+		<div id="pj_table" class="cart_table">
+			<div class="cart_h">主机/配件</div>
+			<div class="o_title cart_title">
+				<div class="checkbox"><span class="select_span all active"></span>
+	    		全选</div>
+				<div class="name text_int20">商品名称</div>
+				<div class="price">单价</div>
+				<div class="number">数量</div>
+				<div class="count">小计</div>
+				<div class="action"></div>
+			</div>
+			<ul>
+				<!-- 购物车列表 -->
+			</ul>
+		</div>
+		<div id="yx_table" class="cart_table">
+			<div class="cart_h">游戏/道具</div>
+			<div class="o_title cart_title">
+				<div class="checkbox"><span class="select_span all active"></span>
+	    		全选</div>
+				<div class="name text_int20">商品名称</div>
+				<div class="price">单价</div>
+				<div class="number">数量</div>
+				<div class="count">小计</div>
+				<div class="action"></div>
+			</div>
+			<ul>
+				<!-- 购物车列表 -->
+			</ul>
+		</div>
+		<div class="summary">
+			<!-- 价格统计 -->
+			<label><span class="select_span active" id="all"></span>全选<a href="javascript:;" id="deleteAll">删除选中的商品</a></label>
+			<p>应付总额（不含运费）：<label>￥</label><span class="s_price myprice"></span></p>
+		</div>
+		<div class="gw_btn">
+			<div class="btn cartBuy btn_300x52">去结算</div>
+		</div>
+	</div>
+</div>
+
+<script id="cartTemplate" type="text/x-jquery-tmpl">
+	{{each list}}
+	    <li id="li_${id}">
+	    	<img src="img/vertical.png" style="height:100%;width:1px;vertical-align: middle;">
+	    	<div class="checkbox">
+	    		<span class="select_span active" data-thumb="${thumb}" data-type="${type}" data-gid="${gid}" data-title="${title}" data-code="${code}" data-price="${price}" data-g_a_flag="${g_a_flag}" data-flag="${flag}" data-stock="${stock}" data-id="${id}"></span>
+	    	</div>
+
+			<div class="name">
+			    <a href="#{{if type==1}}item{{else}}gameItem{{/if}}/${flag}" target="_blank"><img src="${thumb}" data-gid="${gid}"></a>
+			    <p><a href="#{{if type==1}}item{{else}}gameItem{{/if}}/${flag}" target="_blank">${title}</a></p>
+			    {{if type==1}}<label>{{if flag_name}}<span>型号：${flag_name}</span>{{/if}}</label>{{/if}}
+			</div>
+			<div class="price myprice"><span>${price}</span></div>
+			<div class="number">
+				{{if type == 1}}
+					<div class="counter value">
+						<div class="subtract" data-id="${id}" data-g_a_flag="${g_a_flag}" data-price=${price} data-gid="${gid}" data-g_a_flag="${g_a_flag}" data-flag="${flag}">-</div>
+						<div class="count-value">
+							<input type="text" class="count-input" value=${num} data-price=${price} data-gid="${gid}" data-g_a_flag="${g_a_flag}" data-flag="${flag}">
+						</div>
+						<div class="plus" data-id="${id}" data-g_a_flag="${g_a_flag}" data-price=${price} data-gid="${gid}" data-g_a_flag="${g_a_flag}" data-flag="${flag}">+</div>
+					</div>
+				{{else}}
+					{{if type == 3}}
+						<select data-gid="${gid}" data-produceId="${produceId}">
+							<option value ="0">请选择角色</option>
+							{{each ulist}}
+								<option value ="${f_uid}">${f_name}</option>
+							{{/each}}
+						</select>
+						<div class="errmsg"></div>
+					{{else}}
+						适用所有角色
+					{{/if}}
+				{{/if}}
+			</div>
+			<div class="count"><span id="count_${id}" class="myprice">{{if type == 1}}${(price*num).toFixed(2)}{{else}}${price}{{/if}}</span></div>
+			<div class="action" data-id="${id}" data-g_a_flag="${g_a_flag}">
+				<div class="cart_panel_del" title="删除"></div>
+			</div>
+		</li>
+	{{/each}}
+</script>
+
+
+<script id="summaryTemplate123123" type="text/x-jquery-tmpl">
+	<!-- <div>共<span class="su_total">${su_count}</span>件商品金额总计：<span class="su_price">${su_price.toFixed(2)}</span></div> -->
+	<div>应付总额（已免运费）：<span class="s_price myprice">${su_price.toFixed(2)}</span></div>
+</script>
+
+<script id="emptycartTemplate123" type="text/x-jquery-tmpl">
+	<div class="empty">
+		{{if username}}
+			<div>购物车内暂时没有商品</div>
+			<div><a href="index.html">去购物&nbsp;></a></div>
+		{{else}}
+			<div>购物车内暂时没有商品，登录后将显示您之前加入的商品</div>
+			<div class="btn">登录</div><a href="index.html">去购物&nbsp;></a>
+		{{/if}}
+	</div>
+</script>
+
+<script id="emptycartTemplate" type="text/x-jquery-tmpl">
+	<div class="empty">
+	<p class="empty-head">我的购物车</p>
+		<span class="empty_icon"></span>
+		{{if $.getCookie("username")}}
+			<div class="t_a_c">您的购物车空空哒，赶快去挑几件喜欢的商品吧！</div>
+			<div class="t_a_c mb200"><a href="index.html">去购物&nbsp;></a></div>
+		{{else}}
+			<div class="t_a_c">购物车内暂时没有商品，登录后将显示您之前加入的商品</div>
+			<div class="t_a_c"><a href="index.html">去购物&nbsp;></a></div>
+		{{/if}}
+	</div>
+</script>

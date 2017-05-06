@@ -1,0 +1,19 @@
+<div class="centered">
+	<div class="weixin_wrap bg_c_w m_b_40">
+		<!-- content here -->
+	</div>
+</div>
+
+<script id="weixin_pay" type="text/x-jquery-tmpl">
+	<div class="weixin_title">
+		<div class="f_l">您正在使用微信支付<span>订单号：${order_no}</span></div>
+		<div class="f_r">应付总额：<span class="price">￥${total_price}</span></div>
+	</div>
+	<div class="weixin_content">
+		<img class="weixin_bg " src="img/weixinbg.png">
+		<p>支付完成后，页面会自动跳转到支付成功页。如果支付完成后页面没自动跳转，请点击刷新按钮手动刷新！</p>
+	</div>
+	<img class="erweima" data-errorsrc="img/zfsb.png" onerror="$.loadImgError(this)" src="/Wxpay/submit?order_id=${order_id}" />
+</script>
+
+<!-- src="front.php?s=home/Wxpay/{{if type==1}}submit{{else}}gameSubmit{{/if}}&order_no=${order_no}"  -->

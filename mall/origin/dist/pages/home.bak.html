@@ -1,0 +1,85 @@
+
+<!-- 防止样式覆盖 -->
+<style type="text/css">
+	body{
+		background-color: #f8f8f8;
+	}
+</style>
+
+<!-- home banner -->
+<div class="home-banner">
+	<!-- home banner -->
+	<ul class="home-list">
+		<!-- home banner 1 -->
+		<li class="home-li-page1">
+			<h1 class="hb-tit _font">
+				战斧
+				<span class="f1-font"><font class="hb-chinese">F</font><font class="hb-number">1</font></span> 
+			</h1>
+			<p class="hb-txt _font">不止是一台游戏主机<br>更是家庭互联网娱乐中心</p>
+			<!-- 价格 -->
+			<div class="hb-cost">
+				<div class="hb-cost-con hb-line">
+					<font class="hb-c-icon">&yen;</font>
+					<span class="hb-c-cost">899</span>
+					<font class="hb-c-name">畅玩版</font>
+				</div>
+				<div class="hb-cost-con">
+					<font class="hb-c-icon">&yen;</font>
+					<span class="hb-c-cost">1499</span>
+					<font class="hb-c-name">菁英版</font>
+				</div>
+			</div>
+			<div class="hb-btn-con">
+				<a class="hb-btn green" href="index.html#item/f1">立即预购</a>
+				<a class="hb-btn" href="fuze.html">了解更多</a>
+			</div>
+			<p class="hb-tip">送一年VIP游戏会员，仅限预售期间购买用户</p>
+		</li>
+		<!-- home banner 2 -->
+		<li class="home-li-page2">
+			<div class="hb-2-con">
+				<!-- 文本内容 -->
+				<h1 class="hb-tit-2 _font"><font>6.11</font>现货发售 <span>当天下单，现货即发</span></h1>
+				<p class="hb-txt-2-top _font">
+					“机”不可失</br>
+					<span class="txt-font">战斧</span>
+					<span class="f1-font clearfix"><font class="hb-chinese">F</font><font class="hb-number">1</font></span>
+					家庭娱乐游戏机
+				</p>
+				<p class="hb-txt-2-bottom _font">
+					线下签售同步互动，尽在北京悠唐</br>
+					<span>地址：北京市朝阳区三丰北里2号楼（中庭广场）</span>
+				</p>
+				<!-- 抢购按钮 -->
+				<a class="hb-2-btn" href="javascript:">立即抢购</a>
+			</div>
+		</li>
+	</ul>
+	<!-- home banner tips list -->
+	<ul class="home-list-tips"></ul>
+</div>
+<!-- home nav -->
+<div class="home-main">
+	<div class="home-nav clearfix">
+		<a class="home-imgBox video_btn" href="javascript:"><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/home-nav1.png"></a>
+		<a class="home-imgBox" href="#game"><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/home-nav2.png"></a>
+		<a class="home-imgBox mrNone" href="#VR"><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/home-nav3.png"></a>
+	</div>
+</div>
+
+<!-- 视频弹框 -->
+<div class="home-video-pop"></div>
+<!-- 视频模板 -->
+<script id="vedio_box" type="text/x-jquery-tmpl">
+	<div class="home-video-con">
+		<div class="home_videolmain">
+			<video src="http://cdn.fuzeuser.com/fuzemall/vedio/0512-fuze.mp4?wsiphost=local" autoplay controls></video>
+		</div>
+		<!-- 关闭按钮 -->
+		<a class="home-video-close" href="javascript:"></a>
+	</div>
+</script>
+<script>
+	$.get("front.php?s=/Home/Stat/stat", { type: "index_pv"} );
+</script>

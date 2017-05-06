@@ -1,0 +1,74 @@
+<div class="game_wrapper">
+<!-- game banner -->
+<div class="game-banner">
+	<!-- <video id="gameVideo" width="100%" src="http://cdntest.fuzeuser.com/fuzemall/product/video/product.mp4?wsiphost=local" preload loop autoplay></video> -->
+	
+	<!-- banner pic -->
+	<ul class="game-banner-list">
+		<li><img src="http://cdn.fuzeuser.com/fuzemall/game/lb/game-banner-1.jpg"></li>
+		<li><img src="http://cdn.fuzeuser.com/fuzemall/game/lb/game-banner-2.jpg"></li>
+		<li><img src="http://cdn.fuzeuser.com/fuzemall/game/lb/game-banner-3.jpg"></li>
+		<li><img src="http://cdn.fuzeuser.com/fuzemall/game/lb/game-banner-4.jpg"></li>
+	</ul>
+	<!-- banner tip -->
+	<ul class="game-banner-tip-list"></ul>
+</div>
+
+<!-- game txt -->
+<p class="game-txt">
+	超过200家合作伙伴，包括光荣特库摩（Koei Tecmo）、育碧（Ubisoft）、Deep Sliver等国际知名游戏开发商，</br>Rimlight、Comcept等独立游戏工作室，万岁游戏、柳叶刀科技、美格方互动等优秀国内主机游戏制作团队。</br>
+	每款登陆FUZE平台的游戏作品都经过甄选，并获得官方正版授权。</br>
+</p>
+<div class="game_toptit">
+	<dl>
+		<dt class="">游戏分类</dt>
+		<dd>
+			<input placeholder="请输入关键词搜索" type="text">
+			<a href="javascript:;"></a>
+		</dd>
+	</dl>
+</div>
+<div class="game_contaibox">
+	<div class="game_selectbox" style="display:none;">
+		<!-- 分类列表 -->
+	</div>
+	<div class="keyword_list clearfix">
+		<div class="keyword"><span></span><a href="javascript:;"></a></div>
+	</div>
+	<div class="game_list">
+		<!-- 游戏列表 -->
+	</div>
+
+
+	<div id="game_List" class="game_conmMin">
+		<!--这里显示分页内容-->
+	</div>
+	<div class="gamelist_loading"></div>
+	<a href="javascript:;" class="look_all" data-page="1">查看更多</a>
+</div>
+</div>
+
+
+<script id="gameListTemplate" type="text/x-jquery-tmpl">
+	{{each list}}
+		<div class="gamelist_con" data-gid="${gid}">
+			<img src="${resUrl}&op=imageView2&mode=1&width=230&height=310" data-gid="${gid}" />
+			<p class="gamelist_tit">${title}</p>
+		</div>
+	{{/each}}
+</script>
+
+<script id="bannerTemplate" type="text/x-jquery-tmpl">
+	{{each list}}
+		<li style="background-image: url('${banner_pic}');{{if $index==0}}position: relative;{{/if}}" data-url="${banner_url}" class="{{if $index==0}}active{{/if}}">
+			<img src="${banner_pic}">
+		</li>
+	{{/each}}
+</script>
+
+<script id="gameCategoryTemplate" type="text/x-jquery-tmpl">
+	<label><span data-id="0" class="select_span active"></span>全部</label>
+	{{each list}}
+		<label><span data-id="${id}" class="select_span"></span>${name}</label>
+	{{/each}}
+</script>

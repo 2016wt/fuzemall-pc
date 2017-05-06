@@ -1,0 +1,115 @@
+<!-- build:css css/headermin.min.css-->
+<link rel="stylesheet" href="css/header.css" />
+    <!-- endbuild -->
+<div class="nav-wrap">
+	<div id="logo">
+		<a href="index.html#home"><img src="img/logo.png"></a>
+	</div>
+	
+	<div id="nav">
+		<div class="layer2">
+			<!-- salutation and login-->
+		</div>
+	</div>
+	<div class="layer1">
+		<ul>
+			<li id="target_fuze" data-id="#home"><a href="fuze.html">战斧 F1</a></li>
+			<li id="target_fuzeOS" data-id="#fuzeOS"><a href="index.html#fuzeOS">FUZE OS</a></li>
+			<li id="target_game" data-id="#game"><a href="index.html#game">游戏</a></li>
+			<li id="target_VR" data-id="#VR"><a href="index.html#VR">战斧 VR</a></li>
+			<li id="target_serve" data-id="#serve"><a href="index.html#serve">服务</a></li>
+			<li id="target_aboutUs" data-id="#partners"><a href="index.html#partners">合作伙伴</a></li>
+			<li id="target_terms" data-id="#terms"><a href="index.html#joinIn">经销加盟</a></li>
+			<li id="" data-id="#bbs"><a target="_blank" href="http://bbs.fuzegame.com/">社区</a></li>
+		</ul>
+	</div>
+</div>
+
+<script id="headerTemplate" type="text/x-jquery-tmpl">
+	<span class="buycar">
+		<a>
+			<div class="redicon_num">
+				<span class="red_lef"></span>
+				<span class="red_mid">${goods_num}</span>
+				<span class="red_rig"></span>
+			</div>
+			<div class="cart_panel">
+				<div class="cart_panel_up"></div>
+				<div class="cart_panel_wrap">
+					<div id="cart_panel_zjzb" class="p_loading">
+						<div class="cart_panel_title">主机</div>
+						<div class="cart_panel_head">
+							<div class="cart_panel_spmc cart_spmc_text">商品名称</div>
+							<div class="cart_panel_xj">小计</div>
+							<div class="cart_panel_cz">操作</div>
+						</div>
+						<div class="cart_panel_list">
+							<ul>
+								<!-- 主机购物车列表 -->
+							</ul>
+						</div>
+
+					</div>
+					<div id="cart_panel_yxdj" class="p_loading">
+						<div class="cart_panel_title">游戏道具</div>
+						<div class="cart_panel_head">
+							<div class="cart_panel_spmc cart_spmc_text">商品名称</div>
+							<div class="cart_panel_xj">价格</div>
+							<div class="cart_panel_cz">操作</div>
+						</div>
+						<div class="cart_panel_list" >
+							<ul>
+								<!-- 游戏购物车列表 -->
+							</ul>
+						</div>
+					</div>
+					<div class="cart_moneybox">
+						<div class="cart_panel_ze">合计金额：<span>0.00</span></div>
+						<div class="btn cartBuy btn_130x40">去结算</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</span>
+	<span class="un_login" style="float:right;display:{{if username && username!="null"}}none{{else}}inline-block{{/if}}">
+		<a class="login" href="javascript:void(0);">登录</a>
+		<a class="register" href="javascript:void(0);">注册</a>
+	</span>
+	<span class="salutation" style="display:{{if username && username!="null"}}inline-block{{else}}none{{/if}}">
+		<font>你好，</font><span id="salutation_u">
+			<span class="s_span">${username}</span>
+			<div class="links_panel">
+				<div class="links_panel_up"></div>
+				<div class="link_p_l"><a href="index.html#mycenter/welcome">个人中心</a></div>
+				<div class="link_p_l"><a href="index.html#mycenter/myorder">我的订单</a></div>
+				<div class="link_p_l"><a href="index.html#mycenter/aftsale">返修/退换</a></div>
+				<!-- <div class="link_p_l"><a href="${Links.recharge}">个人资料</a></div>   -->
+				<div class="link_p_l"><a href="index.html#mycenter/address">收货地址</a></div>
+				<div class="link_p_l last"><a href="javascript:void(0);" id="logout">退出登录</a></div>
+			</div>
+		</span>
+	</span>
+</script>
+
+<script id="cartPanelTemplate" type="text/x-jquery-tmpl">
+	{{each cartlist}}
+		<li>
+			<div class="cart_panel_spmc">
+				<img src="${thumb}">
+				<div class="cart_panel_name">
+					${title}
+				</div>
+				{{if _type!="game"}}
+					<div class="cart_panel_num">数量：${num}</div>
+					{{if flag_name}}<div class="cart_panel_num">型号：${flag_name}</div>{{/if}}
+				{{/if}}
+			</div>
+			<div class="cart_panel_xj">
+				￥${JSON.parse(price).toFixed(2)}{{if num}}x${num}{{/if}}
+			</div>
+			<div class="cart_panel_cz">
+				<div class="cart_panel_del" data-id="${id}" data-gid="${gid}" data-produceid="${produceId}" data-g_a_flag="${g_a_flag}" data-num="${num}"></div>
+			</div>
+		</li>
+	{{/each}}
+</script>

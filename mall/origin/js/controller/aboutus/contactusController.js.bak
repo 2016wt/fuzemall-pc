@@ -1,0 +1,54 @@
+define(function(){
+	return function(templateUrl,param){
+		$("#center_right").loadPage(templateUrl,["mall/css/aboutus/contactus.css"],function(){
+
+			//bj：北京坐标  sz：深圳坐标
+			var mapPoint = {
+				"bj" : {"x" : "116.495716","y" : "40.00536"},
+				"sz" : {"x" : "113.960124","y" : "22.547718"}
+			};
+
+			//地图初始化
+			function initMap(x,y,regional){
+				var map = new BMap.Map(regional);
+				//var opts = { type: BMAP_NAVIGATION_CONTROL_ZOOM } 
+				map.centerAndZoom(new BMap.Point(x,y), 22);
+				map.enableScrollWheelZoom();    //启用滚轮放大缩小，默认禁用
+				map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+
+				//map.addControl(new BMap.NavigationControl(opts));  //添加默认缩放平移控件
+				var marker = new BMap.Marker(new BMap.Point(x,y));
+				map.addOverlay(marker); 
+				map.panTo(x,y);
+			}
+			
+			//显示地图
+			$(".contactus-address").on("click","a", function(){
+				var ths = $(this);
+				var	thsMap = ths.attr("mapFor");
+				var regional = "mapCon" + thsMap;
+
+				$(".contactus-address a").removeClass("active");
+				ths.addClass("active");
+				$(".mapCon").hide();
+				ths.find(".mapCon").show();
+
+				initMap(mapPoint[thsMap].x,mapPoint[thsMap].y,regional);
+			});
+
+			$(".mapCon").on("click", function(){
+				return false;
+			});
+
+			//点击窗口其他位置  地图消失
+			$(document).on("click",function(event){
+				var eo = $(event.target);
+				if(!eo.is(".mapBtn")){
+					$(".contactus-address a").removeClass("active");
+					$(".mapCon").hide();
+				}
+			});
+			
+		});
+	}
+});

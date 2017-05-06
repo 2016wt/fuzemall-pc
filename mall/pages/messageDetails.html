@@ -1,0 +1,130 @@
+
+<!-- 放在内容里面防止页面后台样式覆盖 -->
+<style type="text/css">
+	body{ background-color: #fff; }
+</style>
+
+<!-- h1 -->
+<h1 class="md-head">
+	<p>官方资讯</p>
+</h1>
+
+<!-- 问题详情 -->
+<div class="md-con">
+	<h2 class="md-tit">问题详情</h2>
+
+	<div class="md-details-con">
+		<!-- load GIF -->
+		<div class="md-details-load"><img src="img/loading.gif"></div>
+		<!-- 问题标签 -->
+		<div class="md-tag-box" id="issueTag"></div>
+		<!-- 您的问题 -->
+		<div class="md-message-con md-imgID" id="issueDetails">
+			
+		</div>
+		<!-- 回复&追问 -->
+		<div class="md-imgID" id="issueReply">
+			
+		</div>
+		<!-- 回复框模板 -->
+		<div class="none" id="issueReplyIptTem">
+			<!-- 操作按钮 -->
+			<div class="md-btnBox" id="md-reply-box">
+				<a class="btn green md-btn JS_btn" id="askResolved" href="javascript:">已解决</a>
+				<a class="btn green md-btn JS_btn" id="askAgain" href="javascript:">追问</a>
+				<div class="md-askBox">
+					<div class="md-ask-con clearfix">
+						<span>追问：</span>
+						<input type="text">
+					</div>
+					<a class="btn grey md-btn-cancel" id="askCancel" href="javascript:">取消</a>
+					<a class="btn green md-btn" id="askPost" href="javascript:">提交问题</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 评分框 -->
+	<div class="md-score" id="messageScore">
+		<p>请评价此次服务</p>
+		<div class="md-score-star">
+			<img class="star" src="img/score-star-choo.png">
+			<img src="img/score-star.png">
+			<img src="img/score-star.png">
+			<img src="img/score-star.png">
+			<img src="img/score-star.png">
+		</div>
+		<div class="md-score-btn">
+			<a class="btn green" id="md-score-cancel" href="javascript:">取消</a>
+			<a class="btn green" id="md-score-ok" href="javascript:">确定</a>
+		</div>
+	</div>
+
+	<!-- 图片放大预览 -->
+	<div class="imgFixed">
+		<!-- 关闭按钮 -->
+		<a class="imgFixedClose" href="javascript:">X</a>
+		<img src="">
+	</div>
+</div>
+
+
+<!-- 问题标签模板 -->
+<script id="issueTagTem" type="text/x-jquery-tmpl">
+	<span class="md-tag-tit">问题标签：</span>
+	<span>${type_name}</span>
+	<span>联系方式：<font>${contact}</font></span>
+	<span>提问时间：<font>${add_time}</font></span>
+	<span>状态：{{if is_solve == 1 }} <font class="solve-done">已解决</font> {{else is_solve == 2 }} <font class="solve-none">待解决</font> {{/if}}</span>
+</script>
+
+<!-- 问题详情模板 -->
+<script id="issueDetailsTem" type="text/x-jquery-tmpl">
+	<p class="md-message-tit">您的问题：</p>
+	<div class="md-message-text">
+		<p><span>问题描述：</span>${content}</p>
+		<!-- 图片 -->
+		<div class="md-imgBox clearfix">
+			{{if pic.length > 0}}
+				{{each pic}}
+					<a class="imgBox" href="javascript:"><img src="${path}"></a>
+				{{/each}}
+			{{/if}}
+		</div>
+	</div>
+</script>
+
+<!-- 回复和追问模板 -->
+<script id="issueReplyTem" type="text/x-jquery-tmpl">
+	{{each list}}
+		{{if type}} 
+			{{if type == 2 }}
+				<!-- 回复 -->
+				<div class="md-message-con">
+					<p class="md-message-tit">客服回复：</p>
+					<div class="md-message-text md-reply">
+						<p>${content}</p>
+						<!-- 图片 -->
+						<div class="md-imgBox clearfix">
+							{{if pic.length > 0}}
+								{{each pic}}
+									<a class="imgBox" href="javascript:"><img src="${path}"></a>
+								{{/each}}
+							{{/if}}
+						</div>
+					</div>
+				</div>
+			{{else type == 1 }}
+				<!-- 追问 -->
+				<div class="md-message-con">
+					<p class="md-message-tit">追问：</p>
+					<div class="md-message-text">
+						<p>${content}</p>
+						<!-- 图片 -->
+						<div class="md-imgBox"></div>
+					</div>
+				</div>
+			{{/if}}
+		{{/if}}
+	{{/each}}
+</script>

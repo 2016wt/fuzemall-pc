@@ -1,0 +1,42 @@
+<div class="order_wrap">
+	<div class="td_head">
+		<div class="td_spmc td">
+			商品名称
+		</div>
+		<div class="td_sqsj td">
+			申请时间
+		</div>
+		<div class="td_status td">
+			状态
+		</div>
+		<div class="td_cz td">
+			操作
+		</div>
+	</div>
+	<div>
+		<table border="0" class="td_content">
+			<!-- table内容 -->
+		</table>
+	</div>
+</div>
+
+<script id="returnTemplate" type="text/x-jquery-tmpl">
+	{{if list.length>0}}
+		{{each list}}
+			<tr class="td_order_no">
+				<td colspan="4">订单编号<span>${order_no}</span></td>
+			</tr>
+			<tr class="td_tr">
+				<td class="td_spmc"><img data-gid="${gid}" src="${thumb}"><a>${title}</a></td>
+				<td class="td_sqsj td">${create_datetime.split(" ")[0]}</td>
+				<td class="td_status td">{{if status==0}}审核中{{else status==1}}审核通过{{else status==2}}审核失败{{else status==3}}收货中{{else status==4}}退款中{{else status==5}}退款完成{{else status==6}}换货中{{else status==7}}换货寄回中{{else status==8}}换货完成{{else status==9}}维修中{{else status==10}}维修寄回{{else status==11}}维修完成{{/if}}</td>
+				<td class="td_cz td">
+					{{if status==4}}<div class="qrsh" data-no="${back_no}"><a>确认收款</a></div>{{/if}}
+					<div class="_ckxq" data-no="${back_no}"><a>查看详情</a></div>
+				</td>
+			</tr>
+		{{/each}}
+	{{else}}
+		<div class="empty_list">你还没有任何退货单哟</div>
+	{{/if}}
+</script>

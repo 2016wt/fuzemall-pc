@@ -1,0 +1,11 @@
+
+.profile-text{
+	margin-top: 15px;
+	line-height: 24px;
+	font-size: 14px;
+	font-weight: 100;
+	color: #666;
+}
+.profile-text p{
+	margin-top: 5px;
+}

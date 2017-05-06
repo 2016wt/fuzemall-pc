@@ -1,0 +1,83 @@
+.banner{
+	height: 400px;
+	background-repeat: no-repeat;
+	background-image: url('http://cdn.fuzeuser.com/fuzemall/banner/201608/zml.png');
+	background-position: center;
+}
+
+.zml_wrap{
+	background-color: #fff;
+	width: 1230px;
+	margin: 22px auto;
+}
+
+.zml_head{
+	height: 68px;
+	line-height: 68px;
+	border-bottom: 1px solid #ececec;
+	padding-left: 54px;
+}
+
+.zml_ct{
+	margin: 0 25px;
+	font-size: 0;
+}
+
+.zml_ct_li{
+	height: 60px;
+	line-height: 68px;
+	border-bottom: 1px solid #ececec;
+	padding-left: 29px;
+}
+
+.zml_head{
+	font-size: 0;
+}
+
+.zml_zwmc{
+	width: 420px;
+}
+
+.zml_zwlx{
+	width: 210px;
+	text-align: center;
+}
+
+.zml_rs{
+	width: 160px;
+	text-align: center;
+}
+
+.zml_dd{
+    width: 180px;
+    text-align: center;
+}
+
+.zml_fbsj{
+	width: 160px;
+	text-align: center;
+}
+
+.zml_head .zml_zwmc,.zml_head .zml_zwlx,.zml_head .zml_rs,.zml_head .zml_dd,.zml_head .zml_fbsj{
+	display: inline-block;
+	font-size: 16px;
+	color: #333;
+}
+
+.zml_ct .zml_zwmc,.zml_ct .zml_zwlx,.zml_ct .zml_rs,.zml_ct .zml_dd,.zml_ct .zml_fbsj{
+	display: inline-block;
+	font-size: 14px;
+	color: #666;
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.zml_zwmc a{
+	color: #666;
+	cursor: pointer;
+}
+
+.zml_zwmc a:hover{
+    color: #1eb7c5;
+}

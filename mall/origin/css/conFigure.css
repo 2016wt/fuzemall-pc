@@ -1,0 +1,128 @@
+.fuzeTop_navbox{
+	position: relative;
+	top: 0px;
+}
+
+.fuzeTop_navbox.fixed_nav{
+	position: fixed;
+}
+
+.figure_wrapper {
+	background: #fff;
+}
+
+.figure_edition {
+	margin-top: 60px;
+	overflow: hidden;
+}
+.figure_ediul {
+	display: block;
+	border-bottom: 1px solid #eaeaea;
+	overflow: hidden;
+
+}
+.figure_acitveul {
+	border-bottom: 1px solid #d2d2d2;
+	margin-bottom: 15px;
+}
+.figure_ediul li  {
+	float: left;
+	text-align: center;
+	display: block;
+	min-height: 30px;
+	padding-bottom: 20px;
+}
+.left_ediulT {
+	width: 278px;
+}
+.left_ediulT .le-tit-1,
+.left_ediulT .le-tit-2{
+    color: #333;
+    text-align: center;
+    font-size: 14px;
+}
+.left_ediulT .le-tit-1{
+	margin-top: 192px;
+}
+.left_ediulT .le-tit-2{
+	margin-top: 93px;
+}
+.left_ediulM {
+	width: 498px;
+}
+.conf_ediuli {
+	height: 350px;
+}
+.left_ediulR {
+	width: 452px;
+}
+.left_ediulM, .left_ediulR {
+	border-left: 1px solid #eaeaea;
+	padding-top: 30px;
+}
+.figure_acitveul .left_ediulM, .figure_acitveul .left_ediulR {
+	font-size: 24px;
+	color: #333;
+	padding: 0;
+	text-align: center;
+	border: none;
+	padding-bottom: 40px;
+}
+.figure_ediul li p {
+	padding:0 0 0 50px;
+	font-size: 14px;
+	color: #333;
+	text-align: left;
+	line-height: 26px;
+}
+.figure_dl {
+	display: block;
+}
+.figure_dl dt {
+	background: #f8f8f8;
+	line-height: 66px;
+	font-size: 18px;
+	color: #333;
+	border-bottom: 1px solid #eaeaea;
+	padding-left: 15px;
+}
+.figure_dl dd p {
+	display: block;
+	border-bottom: 1px solid #eaeaea;
+	overflow: hidden;
+}
+.figure_dl dd p span, .figure_dl dd p label {
+	float: left;
+	line-height: 46px;
+	color: #333;
+	text-align: center;
+	font-size: 14px;
+}
+.figure_dl dd p span {
+	width: 278px;
+	border-right: 1px solid #eaeaea;
+}
+.figure_dl dd p label {
+	width: 950px;
+}
+.figure_contai  {
+	padding-bottom: 100px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.figure_dl dd p .figure_lh{
+	height: 140px;	
+	line-height: 140px;
+}
+.figure_dl dd p .figure_lh img{
+	margin-top: 14px;
+}
+.figure_dl dd p .figure_lh font{
+	display: inline-block;
+	margin: 0 14px;
+	line-height: 26px;
+}
+
+.fs16{
+	font-size: 16px;
+}

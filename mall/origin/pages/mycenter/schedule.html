@@ -1,0 +1,255 @@
+<div class="center_wrap">
+	<dl class="news_contit">
+		<dt></dt>
+	</dl>
+	<div class="schedule_nodes">
+		<!--  -->
+	</div>
+</div>
+
+<script id="scheduleTemplate123" type="text/x-jquery-tmpl">
+	{{each list}}
+		<div class="schedule_nodes_o ${flag}">
+			<div class="schedule_mask"></div>
+			<div class="schedule_nodes_time">${date}</div>
+			<div class="schedule_nodes_n">
+				<div class="schedule_nodes_t">
+					{{if status==0}}
+						审核中
+					{{else status==1}}
+						审核通过
+					{{else status==2}}
+						审核失败
+					{{else status==3}}
+						收货中
+					{{else status==4}}
+						退款中
+					{{else status==5}}
+						退款完成
+					{{else status==6}}
+						换货中
+					{{else status==7}}
+						换货寄回中
+					{{else status==8}}
+						换货完成
+					{{else status==9}}
+						维修中
+					{{else status==10}}
+						维修寄回
+					{{else status==11}}
+						维修完成
+					{{/if}}
+				</div>
+				<div class="schedule_nodes_c {{if status==5 || status==8 || status==11}}over{{/if}}">
+					{{if status==0}}您的{{if type==1}}退货{{else type==2}}换货{{else type==3}}维修{{/if}}申请审核中{{else status==1}}您的{{if type==1}}退货{{else type==2}}换货{{else type==3}}维修{{/if}}申请已审核通过{{if flag=="current"}}，请<span class="schedule_span"><a data-type=${type}>填写退货单号</a></span>{{/if}}{{else status==2}}审核失败，详情联系客服{{else status==3}}<span class="schedule_span">寄货单号</span> {{if express_name}}${express_name}{{/if}}{{if express_no}}${express_no}{{else}}--{{/if}}{{else status==4}}退款中......{{else status==5}}退款完成{{else status==6}}换货中......{{else status==7}}<span class="schedule_span">寄回单号</span> {{if express_name}}${express_name}{{/if}}{{if express_no}}${express_no}{{else}}--{{/if}}{{else status==8}}换货完成{{else status==9}}维修中......{{else status==10}}<span class="schedule_span">寄回单号</span> {{if express_name}}${express_name}{{/if}}{{if express_no}}${express_no}{{else}}--{{/if}}{{else status==11}}维修完成{{/if}}
+					
+					{{if status==3 || status==7 || status==10}}
+						{{if express_info}}
+							<div class="schedule_nodes_kd">
+								{{each express_info}}
+									<div class="schedule_nodes_kd_o {{if $index>0}}old{{/if}}">
+										<div class="schedule_nodes_kd_t">${context}</div>
+										<div class="schedule_nodes_kd_d">${time}</div>
+									</div>
+								{{/each}}
+							</div>
+						{{/if}}
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	{{/each}}
+</script>
+
+<script id="scheduleTemplate" type="text/x-jquery-tmpl">
+	<div class="schedule_pic">
+		{{if type==1}} 
+			<div class="sub_node ssz {{if cur_index==0}}active{{/if}}">
+				<span>&nbsp;审核中&nbsp;</span>
+			</div>
+			<div class="sub_node shtg {{if cur_index==1}}active{{/if}}">
+				<span>审核通过</span>
+			</div>
+			<div class="sub_node shz {{if cur_index==2}}active{{/if}}">
+				<span>&nbsp;收货中&nbsp;</span>
+			</div>
+			<div class="sub_node tkz {{if cur_index==3}}active{{/if}}">
+				<span>&nbsp;退款中&nbsp;</span>
+			</div>
+			<div class="sub_node tkwc {{if cur_index==4 || cur_index == 5}}active{{/if}}">
+				<span>退款完成</span>
+			</div>
+		{{else type==2}}
+			<div class="sub_node ssz {{if cur_index==0}}active{{/if}}">
+				<span>&nbsp;审核中&nbsp;</span>
+			</div>
+			<div class="sub_node shtg {{if cur_index==1}}active{{/if}}">
+				<span>审核通过</span>
+			</div>
+			<div class="sub_node shz {{if cur_index==2}}active{{/if}}">
+				<span>&nbsp;收货中&nbsp;</span>
+			</div>
+			<div class="sub_node ghz {{if cur_index==3}}active{{/if}}">
+				<span>&nbsp;更换中&nbsp;</span>
+			</div>
+			<div class="sub_node fxwc  {{if cur_index==4 || cur_index == 5}}active{{/if}}">
+				<span>已寄回</span>
+			</div>
+		{{else type==3}}
+			<div class="sub_node ssz {{if cur_index==0}}active{{/if}}">
+				<span>&nbsp;审核中&nbsp;</span>
+			</div>
+			<div class="sub_node shtg {{if cur_index==1}}active{{/if}}">
+				<span>审核通过</span>
+			</div>
+			<div class="sub_node shz {{if cur_index==2}}active{{/if}}">
+				<span>&nbsp;收货中&nbsp;</span>
+			</div>
+			<div class="sub_node fxz {{if cur_index==3}}active{{/if}}">
+				<span>&nbsp;维修中&nbsp;</span>
+			</div>
+			<div class="sub_node fxwc  {{if cur_index==4 || cur_index == 5}}active{{/if}}">
+				<span>已寄回</span>
+			</div>
+		{{/if}}
+	</div>
+	<div id="schedule_node">
+		{{if type==1}}  
+			<div class="schedule_node_wrap {{if cur_index==4 || cur_index == 5}}active{{/if}}">
+				<div class="schedule_dot">5</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">退款成功</div>
+					<div class="schedule_node_time">${list[4].date}</div>
+				</div>
+			</div>
+			<div class="schedule_node_wrap {{if cur_index==3}}active{{/if}}">
+				<div class="schedule_dot">4</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">退款中</div>
+					<div class="schedule_node_time">${list[3].date}</div>
+				</div>
+			</div>
+			<div class="schedule_node_wrap {{if cur_index==2}}active{{/if}}">
+				<div class="schedule_dot">3</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">收货中</div>
+					<div class="schedule_node_time">${list[2].date}</div>
+					<div>物流公司：<span>${list[2].express_name}</span></div>
+					<div>退货单号: <span>${list[2].express_no}</span></div>
+					{{if cur_index==2}}<div id="sch_ckwl" class="btn btn_140x40 f_s14">查看物流</div>{{/if}}
+				</div>
+			</div>
+			<div class="schedule_node_wrap {{if cur_index==1}}active{{/if}}">
+				<div class="schedule_dot">2</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">{{if list[1].status == 2}}审核失败{{else}}审核成功{{/if}}</div>
+					{{if list[1].status == 2}}
+						<div>审核失败，详情联系客服</span></div>
+					{{else}}
+						<div class="schedule_node_time">${list[1].date}</div>
+						<div>退货地址，详情请联系在线客服或者电话客服安排处理，客服电话400-464-1616</div>
+						{{if cur_index==1}}<div id="sch_txwlxx" class="btn btn_140x40 f_s14">填写物流信息</div>{{/if}}
+					{{/if}}
+				</div>
+			</div>
+			<div class="schedule_node_wrap {{if cur_index==0}}active{{/if}}" style="border-left:none;">
+				<div class="schedule_dot">1</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">您的退货申请正在审核中</div>
+					<div class="schedule_node_time">${list[0].date}</div>
+				</div>
+			</div>
+		{{else type==2}}
+			<div class="schedule_node_wrap {{if cur_index==4 || cur_index == 5}}active{{/if}}">
+				<div class="schedule_dot">5</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">寄回</div>
+					<div class="schedule_node_time">${list[4].date}</div>
+				</div>
+			</div>
+			<div class="schedule_node_wrap {{if cur_index==3}}active{{/if}}">
+				<div class="schedule_dot">4</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">更换中</div>
+					<div class="schedule_node_time">${list[3].date}</div>
+				</div>
+			</div>
+			<div class="schedule_node_wrap {{if cur_index==2}}active{{/if}}">
+				<div class="schedule_dot">3</div>
+				<div class="schedule_node_i">
+
+					<div class="schedule_node_title">收货中</div>
+					<div class="schedule_node_time">${list[2].date}</div>
+					<div>物流公司：<span>${list[2].express_name}</span></div>
+					<div>退货单号：<span>${list[2].express_no}</span></div>
+					{{if cur_index==2}}<div id="sch_ckwl" class="btn btn_140x40 f_s14">查看物流</div>{{/if}}
+				</div>
+			</div>
+			<div class="schedule_node_wrap {{if cur_index==1}}active{{/if}}">
+				<div class="schedule_dot">2</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">{{if list[1].status == 2}}审核失败{{else}}审核成功{{/if}}</div>
+					{{if list[1].status == 2}}
+						<div>审核失败，详情联系客服</span></div>
+					{{else}}
+						<div class="schedule_node_time">${list[1].date}</div>
+						<div>换货地址，详情请联系在线客服或者电话客服安排处理，客服电话400-464-1616</div>
+						{{if cur_index==1}}<div id="sch_txwlxx" class="btn btn_140x40 f_s14">填写物流信息</div>{{/if}}
+					{{/if}}
+				</div>
+			</div>
+			<div class="schedule_node_wrap {{if cur_index==0}}active{{/if}}" style="border-left:none;">
+				<div class="schedule_dot">1</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">您的换货申请正在审核中</div>
+					<div class="schedule_node_time">${list[0].date}</div>
+				</div>
+			</div>
+		{{else type==3}}
+			<div class="schedule_node_wrap {{if cur_index==4 || cur_index == 5}}active{{/if}}">
+				<div class="schedule_dot">5</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">寄回</div>
+					<div class="schedule_node_time">${list[4].date}</div>
+				</div>
+			</div>
+			<div class="schedule_node_wrap {{if cur_index==3}}active{{/if}}">
+				<div class="schedule_dot">4</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">维修中</div>
+					<div class="schedule_node_time">${list[3].date}</div>
+				</div>
+			</div>
+			<div class="schedule_node_wrap {{if cur_index==2}}active{{/if}}">
+				<div class="schedule_dot">3</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">收货中</div>
+					<div class="schedule_node_time">${list[2].date}</div>
+					<div>物流公司：<span>${list[2].express_name}</span></div>
+					<div>退货单号：<span>${list[2].express_no}</span></div>
+					{{if cur_index==2}}<div id="sch_ckwl" class="btn btn_140x40 f_s14">查看物流</div>{{/if}}
+				</div>
+			</div>
+			<div class="schedule_node_wrap {{if cur_index==1}}active{{/if}}">
+				<div class="schedule_dot">2</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">{{if list[1].status == 2}}审核失败{{else}}审核成功{{/if}}</div>
+					<div class="schedule_node_time">${list[1].date}</div>
+					{{if list[1].status == 2}}
+						<div>审核失败，详情联系客服</span></div>
+					{{else}}
+						<div>寄货地址，详情请联系在线客服或者电话客服安排处理，客服电话400-464-1616</span></div>
+						{{if cur_index==1}}<div id="sch_txwlxx" class="btn btn_140x40 f_s14">填写物流信息</div>{{/if}}
+					{{/if}}
+				</div>
+			</div>
+			<div class="schedule_node_wrap {{if cur_index==0}}active{{/if}}" style="border-left:none;">
+				<div class="schedule_dot">1</div>
+				<div class="schedule_node_i">
+					<div class="schedule_node_title">您的返修申请正在审核中</div>
+					<div class="schedule_node_time">${list[0].date}</div>
+				</div>
+			</div>
+		{{/if}}
+	</div>
+</script>

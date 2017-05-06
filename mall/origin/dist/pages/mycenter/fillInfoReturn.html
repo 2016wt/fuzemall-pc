@@ -1,0 +1,116 @@
+<div class="center_wrap" id="fillInfo">
+	<div id="txwlxx">
+		<dl class="news_contit">
+			<dt>填写物流信息</dt>
+		</dl>
+		<div class="w_express_info">
+			<div>
+				<label><span style="color:red">*</span>物流公司：</label>
+				<select class="myselect">
+					<!-- <optgroup label="-请选择物流公司-">
+						<option value="volvo">顺丰</option>
+	    				<option value="saab">宅急送</option>
+					</optgroup> -->
+				</select>
+				<span class="errmsg"></span>
+			</div>
+			<div>
+				<label><span style="color:red">*</span>物流单号：</label>
+				<input id="wldh" type="text" placeholder="物流单号">
+				<span class="errmsg"></span>
+			</div>
+		</div>
+	</div>
+
+	<div id="txshdz">
+		<dl class="news_contit" style="border-bottom: none;">
+			<dt>请填写您的收货地址</dt>
+		</dl>
+		<div class="w_address">
+			<div>
+				<label><span style="color:red">*</span>收&nbsp;货&nbsp;人：</label>
+				<input id="hh_name" type="text" placeholder="填写收货人">
+				<span class="errmsg"></span>
+			</div>
+			<div>
+				<label><span style="color:red">*</span>手机号码：</label>
+				<input id="hh_tel" type="text" placeholder="填写手机号码">
+				<span class="errmsg"></span>
+			</div>
+			<div>
+				<label><span style="color:red">*</span>收货地址：</label>
+				<select name="province" id="address_province">
+				</select>
+				<select name="city" id="address_city">
+				</select>
+				<select name="area" id="address_area">
+				</select>
+				<span class="errmsg"></span>
+			</div>
+			<div>
+				<label><span style="color:red">*</span>详细地址：</label>
+				<input id="ssdd" type="text" placeholder="填写详细地址">
+				<span class="errmsg"></span>
+			</div>
+		</div>
+	</div>
+	<div id="fillbtn" class="btn_140x40 btn">提交</div>
+</div>
+
+
+<!-- <div class="hh_topwrap">
+	<div class="hh_top_row">
+		<div class="hh_top_key" style="color:#717f8a">请将货物寄到：</div>
+		<div class="hh_top_value" id="hh_accept_address"></div>
+	</div>
+	<div class="hh_top_row">
+		<div class="hh_top_key"><span class="star">*&nbsp;</span>请填写退货的快递单号：</div>
+		<div class="hh_top_value">
+			<select class="myselect">
+			</select>
+			<input type="text" id="kddh" class="myinput" autofocus="autofocus" maxlength="20">
+			<span class="errmsg"></span>
+		</div>
+	</div>
+	<div class="hh_top_row">
+		<div class="hh_top_key">请填写你的收货地址：</div>
+	</div>
+</div> -->
+<!-- <div class="hh_secwrap">
+	<div class="hh_sec_row">
+		<div class="hh_sec_key v_a_t"><span class="star">*&nbsp;</span>收货地址：</div>
+		<div class="hh_sec_value">
+			<div style="margin-bottom:20px;">
+				<select name="province" id="address_province"></select>
+				<select name="city" id="address_city"></select>
+				<select name="area" id="address_area"></select>
+				<span class="errmsg"></span>
+			</div>
+			<div>
+				<input type="text" class="myinput" id="ssdd" maxlength="200">
+				<span class="errmsg"></span>
+			</div>
+		</div>
+	</div>
+	<div class="hh_sec_row">
+		<div class="hh_sec_key"><span class="star">*&nbsp;</span>联系人姓名：</div>
+		<div class="hh_sec_value">
+			<input type="text" id="hh_name" class="myinput" maxlength="20">
+			<span class="errmsg"></span>
+		</div>
+	</div>
+	<div class="hh_sec_row">
+		<div class="hh_sec_key"><span class="star">*&nbsp;</span>手机号码：</div>
+		<div class="hh_sec_value">
+			<input type="text" id="hh_tel" class="myinput" vlaue="185****3463">
+			<span class="errmsg"></span>
+		</div>
+	</div>
+</div>
+<div class="hh_btn btn_180x40 btn">提交</div> -->
+<script id="hhSelectTemplate" type="text/x-jquery-tmpl">
+	<option value="">-请选择物流公司-</option>
+	{{each list}}
+		<option value="${$value}">${$value}</option>
+	{{/each}}
+</script>

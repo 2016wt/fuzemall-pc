@@ -1,0 +1,69 @@
+.fuzefans{
+	min-width: 1230px;
+	background-color: #fff;
+}
+
+.fuzefans .mrg_center{
+	display: block;
+}
+
+.fuzefans .p1{
+	margin-top: 98px;
+}
+
+.fuzefans .p2{
+	margin-top: 80px;
+}
+
+.fuzefans .p3{
+	margin-top: 118px;
+}
+
+.fuzefans .p4{
+	margin-top: 96px;
+}
+
+.fuzefans .p5{
+	margin-top: 46px;
+}
+
+.fuzefans .p6{
+	margin: 62px auto;
+}
+
+.fuzefans .ac_map{
+	border-top: 1px solid #00d4d6;
+}
+
+.ac_map{
+	height: 380px;
+	padding-bottom: 60px;
+	font-size: 0;
+}
+
+#containerbox,#map_detail{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#containerbox{
+	height: 100%;
+	width: 800px;
+}
+
+#map_detail{
+	/*height: 100%;*/
+	text-align: left;
+	margin-left: 50px;
+	padding-top: 38px;
+}
+
+.ac_footer{
+	height: 216px;
+	background-color: #28292a;
+	text-align: center;
+}
+
+.fuzefans .p8{
+	margin-top: 72px;
+}

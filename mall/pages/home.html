@@ -1,0 +1,153 @@
+
+	<!-- 防止样式覆盖 -->
+<style type="text/css">
+	body{
+		background-color: #f8f8f8;
+	}
+</style>
+
+<!-- home banner -->
+<div class="home-banner">
+	<!-- home banner -->
+	<ul class="home-list">
+		<!-- <li style="background-image:url(../img/ban1.png);border-top:1px solid #fff;"></li>
+		<li style="background-image:url(../img/ban2.jpg)"></li> -->
+
+	</ul>
+	<!-- home banner tips list -->
+	<ul class="home-list-tips"></ul>
+</div>
+<div class="home-gameshow">
+  	<div class="home-gameshow-con">
+		
+    </div>
+</div>
+<div class="home-hotgames" style="display:none">
+	<h2>热门游戏 <span>Hot Games</span><a href="./index.html#game"><em>更多<i>></i></em></a></h2>
+	<!-- game recommended -->
+	<div class="game-recommended">
+		<div class="game-slider">
+			<!-- game list -->
+			<div class="game-list  js_slider JS_gameItem hotlist" id="gameRecommend">
+				<!-- 数据渲染 -->
+				
+				
+			</div>
+			<!-- game tips -->
+			<!-- <ul class="game-tips js_slider_tips"></ul> -->
+			<!-- game handle -->
+			<!-- <a class="game-handle game-handle-left js_slider_handle" href="javascript:"></a>
+			<a class="game-handle game-handle-right js_slider_handle" href="javascript:"></a> -->
+		</div>
+	</div>
+</div>
+<div class="home-newgames" style="display:none">
+	<h2>最新游戏 <span>New Games</span><a href="./index.html#game"><em>更多<i>></i></em></a></h2>
+	<div class="game-list newlist" >
+		<!-- 数据渲染 -->
+	</div>
+</div>
+<div class="home-recentnews" style="display:none">
+	<h2>最新动态 <span>News</span><a href="/#newMation"><em>更多<i>></i></em></a></h2>
+	<div class="news-content">
+		<div class="news">
+			<div class="news-game">
+			</div>
+		</div>	
+		<!-- home nav -->
+		<div class=" home-main">
+			<div class="home-nav clearfix">
+				<a class="home-imgBox video_btn" href="../index.html#fuzeOS"><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/wpt.jpg"></a>
+				<a class="home-imgBox" href="#game"><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/home-nav2.png"></a>
+				<a class="home-imgBox mrNone" href="#VR"><img src="http://cdn.fuzeuser.com/fuzemall/goods/mall/home-nav3.png"></a>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+
+
+<!-- 首页轮播图模板 -->
+<script id="banner-tem" type="text/x-jquery-tmpl">
+	 <a href="${banner_url}">
+		<li>
+			<img src="${banner_pic}" alt="">
+			
+		</li>
+     </a>
+
+</script>
+
+
+<!-- 视频弹框
+<div class="home-video-pop"></div>
+视频模板
+<script id="vedio_box" type="text/x-jquery-tmpl">
+	<div class="home-video-con">
+		<div class="home_videolmain">
+			<video src="http://cdn.fuzeuser.com/fuzemall/vedio/0512-fuze.mp4?wsiphost=local" autoplay controls></video>
+		</div>
+		关闭按钮
+		<a class="home-video-close" href="javascript:"></a>
+	</div>
+</script> -->
+<script>
+	$.get("front.php?s=/Home/Stat/stat", { type: "index_pv"} );
+</script>
+
+<script id="fuze_product_tmpl" type="text/x-jquery-tmpl">
+{{each(i,v) list}}
+
+	<div class="home-fuze">
+		<div class="imgbox"><img src="${thumb}" alt=""></div>
+		<div class="fuze-intro">
+			<h1>${title}</h1>
+			<p>${goods_info}</p>
+			{{if is_promotion==1}}
+			<span class="price">￥${pre_price}</span>
+			{{else}}
+			<span class="price">￥${price}</span>
+			{{/if}}
+			<div class="home-fuze-btns">
+				<a href="../index.html#item/${flag}">
+				<span class="buynow">立即购买</span></a>
+					{{if i==0}}
+					  <a href="./index.html#design"><span class="knowmore">了解详情</span></a>
+					  {{else}}
+					 <a href="./index.html#handle"><span class="knowmore">了解详情</span></a>
+					{{/if}}
+			</div>
+			
+			
+		</div>
+	</div>
+ {{/each}}      
+</script>
+<script  id="news_tmpl" type="text/x-jquery-tmpl">
+ {{each(i,v) list}}
+	{{if i==0}}
+		<div class="news-game">
+			<dl>
+				<dt><img src="${pic_url}" alt=""></dt>
+				<dd class="title"><a href="/#latest/${v.id}"><h3>${v.title}<span>${v.add_time}</span></h3></a>
+				<p class="displayPart" >${v.desc}</p><a class="checkmore" href="/#latest/${v.id}">查看更多></a></dd>
+			</dl>
+		</div>
+	{{else}}
+	    <div class="news-game tit">
+			<a href="/#latest/${v.id}" class="new-tit">${v.title}</a><span>${v.add_time}</span>
+		</div>
+	{{/if}}
+	{{/each}}
+</script>
+<script id="hotgame_tmpl" type="text/x-jquery-tmpl">
+	{{each hotlist}}
+		<a href="/#gameItem/${gid}" class="mrNone" target="_blank" id="${gid}"><img src="${resUrl}" alt=""><p>${title}</p></a>
+	{{/each}}
+</script>
+<script id="newgame_tmpl" type="text/x-jquery-tmpl">
+	{{each newlist}}
+		<a href="/#gameItem/${gid}" class="mrNone" target="_blank" id="${gid}"><img src="${resUrl}&op=imageView2&mode=3&width=292&height=390" alt=""><p>${title}</p></a>
+	{{/each}}
+</script>

@@ -1,0 +1,76 @@
+<style>
+.active{
+    background: #1ab4c2;
+    color: #fff;
+}
+.faq_li_t{
+	    cursor: pointer;
+}
+.faq_li_t:hover{
+	background: #1ab4c2;
+    color: #fff;
+}
+#container{overflow: hidden;}
+.parentsprc{width: 1230px;height:405px;margin:0 auto;}
+.new_faq_center{color:rgb(40, 72, 95) !important;}
+.faq_center {margin-top: 10px;}
+</style>
+<div class="parentsprc">
+	<img src="http://cdn.fuzeuser.com//fuzemall/product/guard.png">
+</div>
+<div class="centered faq_center">
+	<div id="faq_left">
+		<div class="faq_left_wrap">
+			<!-- FAQ列表 -->
+		</div>
+	</div>
+	<div id="center_right" class="new_faq_center">
+		<!-- FAQ内容 -->
+	</div>
+</div>
+
+<script id="faqListTemplate123" type="text/x-jquery-tmpl">
+	{{each list}}
+		<div class="fg_title">${cat_name}</div>
+		<ul class="faq_ul">
+			{{each cats}}
+				<li>
+					<div class="faq_li_t ">${cat_name}</div>
+					<div class="faq_li_list">
+						<ul>
+							{{each articles}}
+								<li class="{{if _articleId==article_id}}active{{/if}}" data-id="${article_id}">${title}</li>
+							{{/each}}
+						</ul>
+					</div>
+				</li>
+			{{/each}}
+		</ul>
+	{{/each}}
+</script>
+
+<script id="faqListTemplate" type="text/x-jquery-tmpl">
+<div class="faul_parent">
+	{{each list}}
+		<ul class="faq_ul">
+			{{each cats}}
+				<li>
+					<div class="faq_li_t {{if _articleId==article_id}}active{{/if}}" data-id="${article_id}"><ul><li>${cat_name}</li></ul></div>
+					<div class="faq_li_list">
+						<ul>
+							{{each articles}}
+								<li class="{{if _articleId==article_id}}active{{/if}}" data-id="${article_id}">${title}</li>
+							{{/each}}
+						</ul>
+					</div>
+				</li>
+			{{/each}}
+		</ul>
+	{{/each}}
+</div>
+</script>
+
+<script id="faqTemplate" type="text/x-jquery-tmpl">
+	<div class="faq_center_title">${data.title}</div>
+	<div class="faq_center_content">{{html data.content}}</div>
+</script>

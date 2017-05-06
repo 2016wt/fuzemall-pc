@@ -1,0 +1,61 @@
+<div class="order_wrap" id="aftsale">
+	<dl class="news_contit">
+		<dt>返修/退换</dt>
+		<dd>
+			<a href="javascript:;" class="active" data-type=1>退货单</a>
+			<span>|</span>
+			<a href="javascript:;" data-type=2>换货单</a>
+			<span>|</span>
+			<a href="javascript:;" data-type=3>返修单</a>
+		</dd>
+	</dl>
+	<div class="td_head">
+		<div class="td_thbh td">
+			退货编号
+		</div>
+		<div class="td_spmc td">
+			订单信息
+		</div>
+		<div class="td_sqsj td">
+			申请时间
+		</div>
+		<div class="td_status td">
+			状态
+		</div>
+		<div class="td_cz td">
+			操作
+		</div>
+	</div>
+	<div>
+		<table border="0" class="td_content">
+			<!-- table内容 -->
+		</table>
+	</div>
+</div>
+
+<script id="aftsaleTemplate" type="text/x-jquery-tmpl">
+	{{if list.length>0}}
+		{{each list}}
+			<tr class="td_tr">
+				<td class="td_thbh">${back_no}</td>
+				<td class="td_spmc">
+					<p>订单编号：<span>${order_no}</span></p>
+					<label>
+						<img data-flag="${flag}" src="${thumb}">
+						<a href="#item/${flag}">${title}</a>
+						<span>${attr_name}</span>
+						<span>数量：<font>${num}</font></span>
+					</label>
+				</td>
+				<td class="td_sqsj td">${create_datetime.split(" ")[0]}</td>
+				<td class="td_status td">{{if status==0}}审核中{{else status==1}}审核通过{{else status==2}}审核失败{{else status==3}}收货中{{else status==4}}退款中{{else status==5}}退款完成{{else status==6}}换货中{{else status==7}}换货寄回中{{else status==8}}换货完成{{else status==9}}维修中{{else status==10}}维修寄回{{else status==11}}维修完成{{/if}}</td>
+				<td class="td_cz td">
+					{{if status==4}}<div class="qrsh qrsh-btn" data-no="${back_no}"><a>确认收款</a></div>{{/if}}
+					<div class="_ckxq" data-no="${back_no}"><a>查看详情</a></div>
+				</td>
+			</tr>
+		{{/each}}
+	{{else}}
+		<div class="empty_list">你还没有任何退货单哟</div>
+	{{/if}}
+</script>

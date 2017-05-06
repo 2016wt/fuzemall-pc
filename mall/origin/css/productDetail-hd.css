@@ -1,0 +1,52 @@
+/**
+*   productDetail 手柄
+*   simba
+*   2016-04-21
+*/
+.pd-con{  
+    background-color: #0e0e0e;
+}
+.mt115{
+    margin-top: 115px;
+}
+.mt100{
+    margin-top: 100px;
+}
+.mt180{
+    margin-top: 180px;
+}
+.mt240{
+    margin-top: 240px;
+}
+.pdCon-tit{
+    font-size: 48px;
+    font-weight: 100;
+    color: #fff;
+}
+
+.pdCon-txt{
+    margin: 35px auto 0 auto;
+    width: 800px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 100;
+    color: #b3b3b3;
+}
+.pdCon-txtL{
+    width: 850px;
+}
+.pdCon-img-1{
+    margin-top: 90px;
+}
+.pdCon-img-2{
+    margin-top: 30px;
+}
+.pdCon-img-3{
+    margin-top: 40px;
+}
+.pdCon-img-4{
+    margin-top: 30px;
+}
+.pdCon-img-5{
+    margin-bottom: 115px;
+}
